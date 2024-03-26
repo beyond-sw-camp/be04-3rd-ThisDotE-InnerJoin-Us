@@ -3,8 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../../assets/css/ViewArticle/ViewStudyGroupArticle/globals.css" />
+    <link rel="stylesheet" href="../../../assets/css/ViewArticle/ViewStudyGroupArticle/style.css" />
   </head>
   <body>
     <div class="screen">
@@ -20,18 +20,18 @@
         </div>
         <div class="group-2">
           <div class="group-3">
-            <img class="carbon-view" src="img/carbon-view.png" />
+            <img class="carbon-view" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/carbon-view.png" />
             <div class="text-wrapper-3">490</div>
           </div>
           <div class="group-4">
-            <img class="vector" src="img/vector.png" />
+            <img class="vector" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector.png" />
             <div class="text-wrapper-4">15</div>
           </div>
           <div class="group-5">
-            <img class="mdi-like" src="img/mdi-like.png" />
+            <img class="mdi-like" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like.png" />
             <div class="text-wrapper-5">90</div>
           </div>
-          <img class="image" src="img/image.png" />
+          <img class="image" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/image.png" />
           <div class="text-wrapper-6">2022.02.22</div>
         </div>
         <div class="group-6">
@@ -42,15 +42,18 @@
         <div class="overlap-group-wrapper">
           <div class="overlap-2">
             <div class="overlap-3">
-              <img class="innerjoin-us" src="img/innerjoin-us.png" /><img class="img" src="img/1.png" />
+              <img class="innerjoin-us" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/innerjoin-us.png" />
+              <img class="img" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/1.png" />
             </div>
             <div class="view">
               <div class="overlap-group-2">
                 <div class="text-wrapper-9">검색</div>
-                <img class="mdi-magnify" src="img/mdi-magnify.png" />
+                <img class="mdi-magnify" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-magnify.png" />
               </div>
             </div>
-            <div class="vector-wrapper"><img class="vector-2" src="img/vector-1.png" /></div>
+            <div class="vector-wrapper">
+              <img class="vector-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-1.png" />
+            </div>
           </div>
         </div>
         <div class="group-7">
@@ -61,56 +64,64 @@
           <div class="rectangle-3">
             <input type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
           </div>
-          <img class="mingcute-send-plane" src="img/mingcute-send-plane-fill.png" /></a>
+          <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"/>
         </div>
         <div class="group-8">
-          <img class="image-3" src="img/7.png" />
+          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
           <div class="text-wrapper-11">댓글 작성자</div>
           <div class="text-wrapper-12">2022.02.23</div>
           <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="img/mdi-like-5.png" />
+          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
           <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="img/vector-6.png" /></div>
+          <div class="ph-siren-light">
+            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+          </div>
         </div>
         <div class="group-9">
-          <img class="image-3" src="img/7.png" />
+          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
           <div class="text-wrapper-11">댓글 작성자</div>
           <div class="text-wrapper-12">2022.02.23</div>
           <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="img/mdi-like-5.png" />
+          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
           <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="img/vector-6.png" /></div>
+          <div class="ph-siren-light">
+            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+          </div>
         </div>
         <div class="group-10">
-          <img class="image-3" src="img/7.png" />
+          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
           <div class="text-wrapper-11">댓글 작성자</div>
           <div class="text-wrapper-12">2022.02.23</div>
           <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="img/mdi-like-5.png" />
+          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
           <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="img/vector-6.png" /></div>
+          <div class="ph-siren-light">
+            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+          </div>
         </div>
         <div class="group-11">
-          <img class="image-3" src="img/7.png" />
+          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
           <div class="text-wrapper-11">댓글 작성자</div>
           <div class="text-wrapper-12">2022.02.23</div>
           <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="img/mdi-like-5.png" />
+          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
           <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="img/vector-6.png" /></div>
+          <div class="ph-siren-light">
+            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png"/>
+          </div>
         </div>
         <div class="group-12">
-          <img class="image-3" src="img/7.png" />
+          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
           <div class="text-wrapper-11">댓글 작성자</div>
           <div class="text-wrapper-12">2022.02.23</div>
           <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="img/mdi-like-5.png" />
+          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
           <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="img/vector-6.png" /></div>
+          <div class="ph-siren-light"><img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" /></div>
         </div>
         <div class="group-13">
           <div class="text-wrapper-14">userNickName</div>
-          <img class="ph-siren-light-2" src="img/ph-siren-light.png" />
+          <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
         </div>
       </div>
     </div>
@@ -124,552 +135,4 @@
 </script>
 
 <style scoped>
-.screen {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.screen .div {
-  background-color: #ffffff;
-  width: 1440px;
-  height: 1024px;
-  position: relative;
-}
-
-.screen .group {
-  position: absolute;
-  width: 549px;
-  height: 49px;
-  top: 193px;
-  left: 412px;
-}
-
-.screen .overlap-group {
-  position: relative;
-  width: 547px;
-  height: 49px;
-  background-color: #d9d9d945;
-  border-radius: 20px;
-}
-
-.screen .text-wrapper {
-  top: 14px;
-  left: 16px;
-  color: #000000;
-  font-size: 22px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .overlap-wrapper {
-  position: absolute;
-  width: 550px;
-  height: 232px;
-  top: 284px;
-  left: 411px;
-}
-
-.screen .overlap {
-  position: relative;
-  width: 548px;
-  height: 232px;
-  border-radius: 20px;
-}
-
-.screen .text-wrapper-2 {
-  top: 15px;
-  left: 15px;
-  color: #000000;
-  font-size: 22px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .rectangle {
-  position: absolute;
-  width: 548px;
-  height: 232px;
-  top: 0;
-  left: 0;
-  background-color: #d9d9d945;
-  border-radius: 20px;
-}
-
-.screen .group-2 {
-  position: absolute;
-  width: 549px;
-  height: 44px;
-  top: 523px;
-  left: 416px;
-}
-
-.screen .group-3 {
-  position: absolute;
-  width: 50px;
-  height: 21px;
-  top: 3px;
-  left: 45px;
-}
-
-.screen .carbon-view {
-  position: absolute;
-  width: 22px;
-  height: 21px;
-  top: 0;
-  left: 0;
-}
-
-.screen .text-wrapper-3 {
-  top: 4px;
-  left: 24px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #a7a7a7;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .group-4 {
-  position: absolute;
-  width: 38px;
-  height: 18px;
-  top: 5px;
-  left: 97px;
-}
-
-.screen .vector {
-  position: absolute;
-  width: 20px;
-  height: 18px;
-  top: 0;
-  left: 0;
-}
-
-.screen .text-wrapper-4 {
-  top: 1px;
-  left: 22px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #a7a7a7;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .group-5 {
-  position: absolute;
-  width: 43px;
-  height: 20px;
-  top: 4px;
-  left: 0;
-}
-
-.screen .mdi-like {
-  position: absolute;
-  width: 23px;
-  height: 20px;
-  top: 0;
-  left: 0;
-}
-
-.screen .text-wrapper-5 {
-  top: 3px;
-  left: 25px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #a7a7a7;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .image {
-  width: 545px;
-  height: 3px;
-  top: 41px;
-  left: 2px;
-  position: absolute;
-  object-fit: cover;
-}
-
-.screen .text-wrapper-6 {
-  position: absolute;
-  top: 0;
-  left: 450px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #0000003b;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.screen .group-6 {
-  position: absolute;
-  width: 114px;
-  height: 19px;
-  top: 253px;
-  left: 849px;
-}
-
-.screen .text-wrapper-7 {
-  top: 2px;
-  left: 0;
-  color: #000000;
-  font-size: 12px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .rectangle-2 {
-  position: absolute;
-  width: 54px;
-  height: 19px;
-  top: 0;
-  left: 41px;
-  background-color: #d9d9d94f;
-  border-radius: 20px;
-}
-
-.screen .text-wrapper-8 {
-  top: 2px;
-  left: 98px;
-  color: #000000;
-  font-size: 12px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .overlap-group-wrapper {
-  position: absolute;
-  width: 1305px;
-  height: 94px;
-  top: 28px;
-  left: 67px;
-}
-
-.screen .overlap-2 {
-  position: relative;
-  height: 94px;
-}
-
-.screen .overlap-3 {
-  position: absolute;
-  width: 1305px;
-  height: 94px;
-  top: 0;
-  left: 0;
-}
-
-.screen .innerjoin-us {
-  position: absolute;
-  width: 155px;
-  height: 94px;
-  top: 0;
-  left: 14px;
-  object-fit: cover;
-}
-
-.screen .img {
-  width: 1305px;
-  height: 2px;
-  top: 92px;
-  left: 0;
-  position: absolute;
-  object-fit: cover;
-}
-
-.screen .view {
-  position: absolute;
-  width: 276px;
-  height: 40px;
-  top: 17px;
-  left: 783px;
-}
-
-.screen .overlap-group-2 {
-  position: relative;
-  width: 274px;
-  height: 40px;
-  background-color: #ffffff;
-  border-radius: 50px;
-  border: 1px solid;
-  border-color: #000000;
-}
-
-.screen .text-wrapper-9 {
-  width: 51px;
-  top: 9px;
-  left: 30px;
-  color: #d9d9d9;
-  font-size: 20px;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .mdi-magnify {
-  position: absolute;
-  width: 25px;
-  height: 26px;
-  top: 7px;
-  left: 5px;
-}
-
-.screen .vector-wrapper {
-  position: absolute;
-  width: 43px;
-  height: 40px;
-  top: 18px;
-  left: 1240px;
-  background-color: #7f94e1;
-  border-radius: 21.5px/20px;
-}
-
-.screen .vector-2 {
-  position: absolute;
-  width: 19px;
-  height: 17px;
-  top: 11px;
-  left: 11px;
-}
-
-.screen .group-7 {
-  position: absolute;
-  width: 545px;
-  height: 91px;
-  top: 583px;
-  left: 417px;
-}
-
-.screen .div-wrapper {
-  position: absolute;
-  width: 59px;
-  height: 32px;
-  top: 0;
-  left: 0;
-}
-
-.screen .overlap-group-3 {
-  position: relative;
-  width: 57px;
-  height: 32px;
-  background-color: #e6ecff;
-  border-radius: 20px;
-}
-
-.screen .text-wrapper-10 {
-  top: 4px;
-  left: 10px;
-  color: #000000;
-  font-size: 20px;
-  white-space: nowrap;
-  position: absolute;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .image-2 {
-  width: 545px;
-  height: 3px;
-  top: 88px;
-  left: 0;
-  position: absolute;
-  object-fit: cover;
-}
-
-.screen .rectangle-3 {
-  position: absolute;
-  width: 490px;
-  height: 24px;
-  top: 52px;
-  left: 2px;
-  background-color: #0000000a;
-  border-radius: 5px;
-  border: 1px solid;
-  border-color: #00000033;
-}
-
-.screen .mingcute-send-plane {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 52px;
-  left: 506px;
-}
-
-.screen .group-8 {
-  position: absolute;
-  width: 553px;
-  height: 51px;
-  top: 686px;
-  left: 417px;
-}
-
-.screen .image-3 {
-  position: absolute;
-  width: 545px;
-  height: 3px;
-  top: 48px;
-  left: 0;
-  object-fit: cover;
-}
-
-.screen .text-wrapper-11 {
-  position: absolute;
-  top: 0;
-  left: 5px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .text-wrapper-12 {
-  position: absolute;
-  top: 0;
-  left: 72px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #0000003b;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .p {
-  position: absolute;
-  top: 23px;
-  left: 5px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .mdi-like-2 {
-  position: absolute;
-  width: 23px;
-  height: 20px;
-  top: 10px;
-  left: 462px;
-}
-
-.screen .text-wrapper-13 {
-  position: absolute;
-  width: 27px;
-  top: 13px;
-  left: 487px;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #a7a7a7;
-  font-size: 12px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .ph-siren-light {
-  position: absolute;
-  width: 23px;
-  height: 23px;
-  top: 8px;
-  left: 516px;
-}
-
-.screen .vector-3 {
-  position: absolute;
-  width: 18px;
-  height: 19px;
-  top: 0;
-  left: 2px;
-}
-
-.screen .group-9 {
-  position: absolute;
-  width: 553px;
-  height: 51px;
-  top: 938px;
-  left: 417px;
-}
-
-.screen .group-10 {
-  position: absolute;
-  width: 553px;
-  height: 51px;
-  top: 875px;
-  left: 417px;
-}
-
-.screen .group-11 {
-  position: absolute;
-  width: 553px;
-  height: 51px;
-  top: 812px;
-  left: 418px;
-}
-
-.screen .group-12 {
-  position: absolute;
-  width: 553px;
-  height: 51px;
-  top: 749px;
-  left: 417px;
-}
-
-.screen .group-13 {
-  position: absolute;
-  width: 530px;
-  height: 30px;
-  top: 152px;
-  left: 419px;
-}
-
-.screen .text-wrapper-14 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #000000;
-  font-size: 22px;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.screen .ph-siren-light-2 {
-  position: absolute;
-  width: 26px;
-  height: 27px;
-  top: 7px;
-  left: 503px;
-}
-
 </style>
