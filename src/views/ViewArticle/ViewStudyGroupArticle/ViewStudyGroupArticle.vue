@@ -1,11 +1,4 @@
 <template>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../assets/css/ViewArticle/ViewStudyGroupArticle/globals.css" />
-    <link rel="stylesheet" href="../../../assets/css/ViewArticle/ViewStudyGroupArticle/style.css" />
-  </head>
   <body>
     <div class="screen">
       <div class="div">
@@ -60,7 +53,7 @@
           <div class="div-wrapper">
             <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
           </div>
-          <img class="image-2" src="img/2.png" />
+          <img class="image-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/img/2.png" />
           <div class="rectangle-3">
             <input type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
           </div>
@@ -126,15 +119,13 @@
       </div>
     </div>
   </body>
-</html>
-
 </template>
 
 <script setup>
-  import { useRoute } from 'vue-router'
 
-  const router = useRoute();
 </script>
 
 <style scoped>
+  @import "@/assets/css/ViewArticle/ViewStudyGroupArticle/style.css";
+  @import "@/assets/css/ViewArticle/ViewStudyGroupArticle/globals.css";
 </style>

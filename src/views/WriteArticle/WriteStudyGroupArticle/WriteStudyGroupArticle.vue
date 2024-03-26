@@ -101,13 +101,10 @@
 </template>
 
 <script setup>
-  import { useRoute } from 'vue-router'
-
-  const router = useRoute();
-
 
 </script>
 
 <style scoped>
-
+  @import "@/assets/css/WriteArticle/WriteStudyGroupArticle/style.css";
+  @import "@/assets/css/WriteArticle/WriteStudyGroupArticle/globals.css";
 </style>

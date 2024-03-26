@@ -1,11 +1,4 @@
 <template>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../assets/css/ModifyArticle/ModifyStudyGroupArticle/globals.css" />
-    <link rel="stylesheet" href="../../../assets/css/ModifyArticle/ModifyStudyGroupArticle/style.css" />
-  </head>
   <body>
     <div class="screen">
       <div class="div">
@@ -68,15 +61,13 @@
       </div>
     </div>
   </body>
-</html>
-
 </template>
 
 <script setup>
-  import { useRoute } from 'vue-router'
 
-  const router = useRoute();
 </script>
 
 <style scoped>
+  @import "@/assets/css/ModifyArticle/ModifyStudyGroupArticle/globals.css";
+  @import "@/assets/css/ModifyArticle/ModifyStudyGroupArticle/style.css";
 </style>
