@@ -3,7 +3,7 @@ import MainPageBeforeLogin from '@/views/MainPage/MainPageBeforeLogin/MainPageBe
 import WriteStudyGroupArticle from '@/views/WriteArticle/WriteStudyGroupArticle/WriteStudyGroupArticle.vue'
 import ViewStudyGroupArticle from '@/views/ViewArticle/ViewStudyGroupArticle/ViewStudyGroupArticle.vue'
 import ModifyStudyGroupArticle from '@/views/ModifyArticle/ModifyStudyGroupArticle/ModifyStudyGroupArticle.vue'
-import ViewUserProfile from '@/views/UserProfile/ViewUserProfile/VIewUserProfile.vue';
+import ViewUserProfile from '@/views/UserProfile/VIewUserProfile/VIewUserProfile.vue';
 
 
 
