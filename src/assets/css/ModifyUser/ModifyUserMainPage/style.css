@@ -1,0 +1,263 @@
+.div-wrapper {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.div-wrapper .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.div-wrapper .group {
+  position: absolute;
+  width: 278px;
+  height: 179px;
+  top: 258px;
+  left: 281px;
+}
+
+.div-wrapper .text-wrapper {
+  top: -1px;
+  left: -1px;
+  -webkit-text-stroke: 1px #000000;
+  color: #000000;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-2 {
+  top: 64px;
+  left: 0;
+  color: #000000;
+  font-size: 20px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .text-wrapper-3 {
+  top: 113px;
+  left: 0;
+  color: #000000a6;
+  font-size: 25px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .p {
+  top: 143px;
+  left: 0;
+  color: transparent;
+  font-size: 17px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .span {
+  color: #00000052;
+}
+
+.div-wrapper .text-wrapper-4 {
+  color: #000000;
+  font-size: 30px;
+}
+
+.div-wrapper .text-wrapper-5 {
+  top: 508px;
+  left: 280px;
+  -webkit-text-stroke: 1px #000000;
+  color: #000000;
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.div-wrapper .group-2 {
+  position: absolute;
+  width: 903px;
+  height: 59px;
+  top: 574px;
+  left: 270px;
+}
+
+.div-wrapper .image {
+  position: absolute;
+  width: 899px;
+  height: 1px;
+  top: 58px;
+  left: 0;
+  object-fit: cover;
+}
+
+.div-wrapper .text-wrapper-6 {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .text-wrapper-7 {
+  position: absolute;
+  top: 14px;
+  left: 731px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #00000052;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .ooui-next-ltr {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 16px;
+  left: 850px;
+}
+
+.div-wrapper .group-3 {
+  position: absolute;
+  width: 903px;
+  height: 59px;
+  top: 661px;
+  left: 270px;
+}
+
+.div-wrapper .text-wrapper-8 {
+  position: absolute;
+  top: 5px;
+  left: 646px;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #00000052;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .img {
+  top: 7px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 850px;
+}
+
+.div-wrapper .group-4 {
+  position: absolute;
+  width: 903px;
+  height: 59px;
+  top: 748px;
+  left: 270px;
+}
+
+.div-wrapper .text-wrapper-9 {
+  top: 8px;
+  left: 689px;
+  color: #00000047;
+  font-size: 20px;
+  position: absolute;
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.div-wrapper .ooui-next-ltr-2 {
+  top: 10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 850px;
+}
+
+.div-wrapper .overlap-wrapper {
+  position: absolute;
+  width: 1305px;
+  height: 94px;
+  top: 21px;
+  left: 67px;
+}
+
+.div-wrapper .overlap {
+  position: relative;
+  height: 94px;
+}
+
+.div-wrapper .overlap-group {
+  position: absolute;
+  width: 1305px;
+  height: 94px;
+  top: 0;
+  left: 0;
+}
+
+.div-wrapper .innerjoin-us {
+  position: absolute;
+  width: 155px;
+  height: 94px;
+  top: 0;
+  left: 14px;
+  object-fit: cover;
+}
+
+.div-wrapper .image-2 {
+  position: absolute;
+  width: 1305px;
+  height: 2px;
+  top: 92px;
+  left: 0;
+  object-fit: cover;
+}
+
+.div-wrapper .vector-wrapper {
+  position: absolute;
+  width: 43px;
+  height: 40px;
+  top: 24px;
+  left: 1239px;
+  background-color: #7f94e1;
+  border-radius: 21.5px/20px;
+}
+
+.div-wrapper .vector {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 11px;
+  left: 11px;
+}
