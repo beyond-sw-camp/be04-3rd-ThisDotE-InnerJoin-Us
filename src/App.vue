@@ -4,11 +4,7 @@
 
 
 <template>
-<header>
-    <div class="wrapper">
-        <RouterLink to="/mainpagebeforelogin"></RouterLink>
-    </div>
-</header>
+    
 <main>
     <RouterView/>
 </main>

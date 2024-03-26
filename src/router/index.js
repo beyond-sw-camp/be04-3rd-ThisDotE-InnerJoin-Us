@@ -7,7 +7,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/mainpagebeforelogin',
+            path: '/',
             component: MainPageBeforeLogin
         },
         {
