@@ -186,5 +186,6 @@
 </script>
 
 <style scoped>
-
+    @import '@/assets/css/UserProfile/ViewUserProfile/globals.css';
+    @import '@/assets/css/UserProfile/ViewUserProfile/style.css';
 </style>
