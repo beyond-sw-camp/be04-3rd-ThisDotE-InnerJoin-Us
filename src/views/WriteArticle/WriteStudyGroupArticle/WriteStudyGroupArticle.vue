@@ -1,11 +1,4 @@
 <template>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../assets/css/WriteArticle/WriteStudyGroupArticle/globals.css" />
-    <link rel="stylesheet" href="../../../assets/css/WriteArticle/WriteStudyGroupArticle/style.css" />
-  </head>
   <body>
     <div class="screen">
       <div class="div">
@@ -105,8 +98,6 @@
       </div>
     </div>
   </body>
-</html>
-
 </template>
 
 <script setup>
@@ -118,4 +109,5 @@
 </script>
 
 <style scoped>
+
 </style>
