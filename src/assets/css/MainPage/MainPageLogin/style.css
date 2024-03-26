@@ -1,0 +1,276 @@
+.screen {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.screen .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.screen .group {
+  position: absolute;
+  width: 543px;
+  height: 334px;
+  top: 123px;
+  left: 454px;
+}
+
+.screen .image {
+  position: absolute;
+  width: 539px;
+  height: 1px;
+  top: 190px;
+  left: 0;
+  object-fit: cover;
+}
+
+.screen .text-wrapper {
+  position: absolute;
+  width: 498px;
+  top: 235px;
+  left: 27px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .innerjoin-us {
+  width: 227px;
+  height: 150px;
+  left: 156px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.screen .text-wrapper-2 {
+  position: absolute;
+  width: 108px;
+  top: 314px;
+  left: 207px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #686464e3;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .group-2 {
+  position: absolute;
+  width: 541px;
+  height: 20px;
+  top: 580px;
+  left: 447px;
+}
+
+.screen .overlap-group {
+  position: absolute;
+  width: 395px;
+  height: 20px;
+  top: 0;
+  left: 144px;
+}
+
+.screen .img {
+  top: 12px;
+  left: 266px;
+  position: absolute;
+  width: 129px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.screen .text-wrapper-3 {
+  width: 318px;
+  left: 0;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #686464e3;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+}
+
+.screen .image-2 {
+  top: 13px;
+  left: 0;
+  position: absolute;
+  width: 129px;
+  height: 1px;
+  object-fit: cover;
+}
+
+.screen .group-3 {
+  position: absolute;
+  width: 477px;
+  height: 48px;
+  top: 485px;
+  left: 476px;
+}
+
+.screen .overlap {
+  position: absolute;
+  width: 146px;
+  height: 56px;
+  top: -4px;
+  left: -4px;
+  background-image: url(./img/rectangle-499.png);
+  background-size: 100% 100%;
+}
+
+.screen .bi-github {
+  position: absolute;
+  width: 24px;
+  height: 22px;
+  top: 17px;
+  left: 61px;
+}
+
+.screen .cib-google-wrapper {
+  position: absolute;
+  width: 146px;
+  height: 56px;
+  top: -4px;
+  left: 165px;
+  background-image: url(./img/rectangle-500.png);
+  background-size: 100% 100%;
+}
+
+.screen .cib-google {
+  position: absolute;
+  width: 22px;
+  height: 20px;
+  top: 18px;
+  left: 62px;
+}
+
+.screen .ri-kakao-talk-fill-wrapper {
+  position: absolute;
+  width: 146px;
+  height: 56px;
+  top: -4px;
+  left: 335px;
+  background-image: url(./img/rectangle-501.png);
+  background-size: 100% 100%;
+}
+
+.screen .ri-kakao-talk-fill {
+  position: absolute;
+  width: 30px;
+  height: 29px;
+  top: 14px;
+  left: 58px;
+}
+
+.screen .group-4 {
+  position: absolute;
+  width: 400px;
+  height: 201px;
+  top: 661px;
+  left: 519px;
+}
+
+.screen .overlap-2 {
+  position: absolute;
+  width: 394px;
+  height: 53px;
+  top: 147px;
+  left: 0;
+}
+
+.screen .rectangle {
+  position: absolute;
+  width: 394px;
+  height: 53px;
+  top: 0;
+  left: 0;
+}
+
+.screen .text-wrapper-4 {
+  position: absolute;
+  width: 108px;
+  top: 15px;
+  left: 167px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #000000e3;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .div-wrapper {
+  position: absolute;
+  width: 394px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/rectangle-502.png);
+  background-size: 100% 100%;
+}
+
+.screen .text-wrapper-5 {
+  position: absolute;
+  width: 108px;
+  top: 14px;
+  left: 17px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #686464e3;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .PW-wrapper {
+  position: absolute;
+  width: 394px;
+  height: 48px;
+  top: 71px;
+  left: 0;
+  background-image: url(./img/rectangle-503.png);
+  background-size: 100% 100%;
+}
+
+.screen .PW {
+  position: absolute;
+  width: 108px;
+  top: 14px;
+  left: 15px;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #686464e3;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.screen .span {
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #686464e3;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+
+.screen .text-wrapper-6 {
+  font-size: 18px;
+}
