@@ -1,13 +1,18 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import MainPageBeforeLogin from '@/views/MainPage/MainPageBeforeLogin/MainPageBeforeLogin.vue';
+import ViewUserProfile from '@/views/UserProfile/ViewUserProfile/VIewUserProfile.vue';
 
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/mainpagebeforelogin',
+            path: '/',
             component: MainPageBeforeLogin
+        },
+        {
+            path: '/viewuserprofile',
+            component: ViewUserProfile
         }
     ]
 })
