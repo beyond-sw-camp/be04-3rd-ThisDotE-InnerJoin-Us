@@ -101,7 +101,7 @@
 </template>
 
 <script setup>
-  // third
+
 </script>
 
 <style scoped>
