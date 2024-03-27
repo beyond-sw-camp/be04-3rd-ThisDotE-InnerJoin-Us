@@ -59,11 +59,11 @@
           </div>
           <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"/>
         </div>
-        <div class="group-8">
+        <div v-for="reply in article.replyDTOList" :key="reply.replyId" class="group-8">
           <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div class="text-wrapper-11">{{reply.responseUser.userId}}</div>
+          <div class="text-wrapper-12">{{reply.replyCreatedDate}}</div>
+          <p class="p">reply.</p>
           <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
           <div class="text-wrapper-13">90</div>
           <div class="ph-siren-light">
