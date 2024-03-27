@@ -4,7 +4,9 @@ import WriteStudyGroupArticle from '@/views/WriteArticle/WriteStudyGroupArticle/
 import ViewStudyGroupArticle from '@/views/ViewArticle/ViewStudyGroupArticle/ViewStudyGroupArticle.vue'
 import ModifyStudyGroupArticle from '@/views/ModifyArticle/ModifyStudyGroupArticle/ModifyStudyGroupArticle.vue'
 import ViewUserProfile from '@/views/UserProfile/VIewUserProfile/VIewUserProfile.vue';
-
+import ViewUserAllActivationLogReply from '@/views/UserProfile/ViewUserAllActivationLog/Reply/Reply.vue';
+import ViewUserAllActivationLogArticle from '@/views/UserProfile/ViewUserAllActivationLog/Article/Article.vue';
+import ViewOtherUserProfile from '@/views/UserProfile/ViewOtherUserProfile/ViewOtherUserProfile.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -18,7 +20,7 @@ const router = createRouter({
             component: WriteStudyGroupArticle
         },
         {
-            path: '/viewStudyGroupArticle',
+            path: '/viewStudyGroupArticle/:id',
             component: ViewStudyGroupArticle
         },
         {
@@ -26,8 +28,20 @@ const router = createRouter({
             component: ModifyStudyGroupArticle
         },
         {
-            path: '/viewuserprofile',
+            path: '/viewuserprofile/:id',
             component: ViewUserProfile
+        },
+        {
+            path: '/viewuserallactivationlogreply',
+            component: ViewUserAllActivationLogReply
+        },
+        {
+            path: '/viewuserallactivationlogarticle',
+            component: ViewUserAllActivationLogArticle
+        },
+        {
+            path: '/viewotheruserprofile',
+            component: ViewOtherUserProfile
         }
     ]
 })

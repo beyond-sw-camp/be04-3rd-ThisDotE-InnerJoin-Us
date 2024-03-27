@@ -65,6 +65,7 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .div-wrapper .text-wrapper-2 {
@@ -491,6 +492,7 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .text-wrapper-16 {
@@ -517,6 +519,7 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .group-14 {
