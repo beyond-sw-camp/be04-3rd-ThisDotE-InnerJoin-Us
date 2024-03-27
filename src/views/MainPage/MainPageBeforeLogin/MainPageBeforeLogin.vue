@@ -89,7 +89,7 @@
         <div class="group-15">
           <img class="image-4" src="@/assets/img/MainPage/MainPageBeforeLogin/3.png" />
           <div v-if="studyList.length" class="group-16">
-            <div class="text-wrapper-15" @click="changeRouter(studyList[0].articleId)">{{ studyList[1].articleTitle }}</div>
+            <div class="text-wrapper-15" @click="changeRouter(studyList[1].articleId)">{{ studyList[1].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[1].articleCreateDate }}</div>
             <div class="text-wrapper-17">{{ studyList[1].userList.userId }}</div>
           </div>
@@ -105,7 +105,7 @@
         <div class="group-18">
           <img class="image-4" src="@/assets/img/MainPage/MainPageBeforeLogin/4.png" />
           <div v-if="studyList.length" class="group-16">
-            <div class="text-wrapper-15" @click="changeRouter(studyList[0].articleId)">{{ studyList[2].articleTitle }}</div>
+            <div class="text-wrapper-15" @click="changeRouter(studyList[2].articleId)">{{ studyList[2].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[2].articleCreateDate }}</div>
             <div class="text-wrapper-17">{{ studyList[2].userList.userId }}</div>
           </div>
@@ -161,7 +161,7 @@
 
 <script setup >
   import axios from 'axios';
-  import {ref, onMounted, computed} from 'vue';
+  import {ref, onMounted} from 'vue';
   import { useRouter } from 'vue-router';
 
   const router = useRouter();
