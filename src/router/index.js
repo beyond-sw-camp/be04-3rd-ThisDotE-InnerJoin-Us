@@ -4,8 +4,9 @@ import WriteStudyGroupArticle from '@/views/WriteArticle/WriteStudyGroupArticle/
 import ViewStudyGroupArticle from '@/views/ViewArticle/ViewStudyGroupArticle/ViewStudyGroupArticle.vue'
 import ModifyStudyGroupArticle from '@/views/ModifyArticle/ModifyStudyGroupArticle/ModifyStudyGroupArticle.vue'
 import ViewUserProfile from '@/views/UserProfile/VIewUserProfile/VIewUserProfile.vue';
-
-
+import ViewAllHotStudyGroupArticle from '@/views/ViewAllArticleHot/ViewAllHotStudyGroupArticle/ViewAllHotStudyGroupArticle.vue';
+import ViewAllStudyGroupArticle from '@/views/ViewAllArticleRecently/ViewAllStudyGroupArticle/ViewAllStudyGroupArticle.vue';
+import ViewAllStudyGroupArticleToggle from '@/views/ViewAllArticleToggle/ViewAllStudyGroupArticleToggle/ViewAllStudyGroupArticleToggle.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,7 +20,7 @@ const router = createRouter({
             component: WriteStudyGroupArticle
         },
         {
-            path: '/viewStudyGroupArticle/:id',
+            path: '/viewStudyGroupArticle',
             component: ViewStudyGroupArticle
         },
         {
@@ -29,6 +30,18 @@ const router = createRouter({
         {
             path: '/viewuserprofile',
             component: ViewUserProfile
+        },
+        {
+            path: '/viewallhotstudygrouparticle',
+            component: ViewAllHotStudyGroupArticle
+        },
+        {
+            path: '/viewallstudygrouparticle',
+            component: ViewAllStudyGroupArticle
+        },
+        {
+            path: '/viewallstudygrouparticletoggle',
+            component: ViewAllStudyGroupArticleToggle
         }
     ]
 })
