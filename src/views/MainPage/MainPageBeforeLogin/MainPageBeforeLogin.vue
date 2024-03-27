@@ -7,7 +7,7 @@
             <div class="overlap-group">
               <img class="innerjoin-us" src="@/assets/img/MainPage/MainPageBeforeLogin/innerjoin-us.png" /> <img class="image" src="@/assets/img/MainPage/MainPageBeforeLogin/image.png" />
             </div>
-            <div class="text-wrapper" @click="">스터디구인</div>
+            <div class="text-wrapper">스터디구인</div>
             <div class="text-wrapper-2">정보 공유</div>
             <div class="text-wrapper-3">질문</div>
             <div class="view">
@@ -73,7 +73,7 @@
         <div class="group-12">
           <img class="image-3" src="@/assets/img/MainPage/MainPageBeforeLogin/3.png" />
           <div  v-if="studyList.length" class="group-13">
-            <div class="text-wrapper-15">{{ studyList[0].articleTitle }}</div>
+            <div class="text-wrapper-15"   @click="changeRouter(studyList[0].articleId)">{{ studyList[0].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[0].articleCreateDate }}</div>
             <div class="text-wrapper-17">{{ studyList[0].userCode }}</div>
           </div>
@@ -162,6 +162,9 @@
 <script setup >
   import axios from 'axios';
   import {ref, onMounted, computed} from 'vue';
+  import { useRouter } from 'vue-router';
+
+  const router = useRouter();
 
   const studyValue = ref([]);
   const shareValue = ref([]);
@@ -192,6 +195,10 @@
       console.error("Error: ", error);
     }
   })
+
+  function changeRouter(routerName){
+    router.push(`/viewStudyGroupArticle/${routerName}`)
+  }
 
 </script>
 
