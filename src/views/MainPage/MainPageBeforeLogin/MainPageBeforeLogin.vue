@@ -93,13 +93,13 @@
             <div class="text-wrapper-16">{{ studyList[1].articleCreateDate }}</div>
             <div class="text-wrapper-17">{{ studyList[1].userList.userId }}</div>
           </div>
-          <div class="group-17">
+          <div v-if="studyList.length" class="group-17">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like-1.png" />
-            <div class="text-wrapper-18">1.6K</div>
-            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view-1.png" />
-            <div class="text-wrapper-19">100</div>
-            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined-1.png" />
-            <div class="text-wrapper-20">14</div>
+            <div class="text-wrapper-18">{{ studyList[1].articleLikeCount }}</div>
+            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view.png" />
+            <div class="text-wrapper-19">{{ studyList[1].articleViewCount }}</div>
+            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined.png" />
+            <div class="text-wrapper-20">{{ studyList[1].articleReplyCount }}</div>
           </div>
         </div>
         <div class="group-18">
@@ -109,13 +109,13 @@
             <div class="text-wrapper-16">{{ studyList[2].articleCreateDate }}</div>
             <div class="text-wrapper-17">{{ studyList[2].userList.userId }}</div>
           </div>
-          <div class="group-17">
+          <div v-if="studyList.length" class="group-17">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like-2.png" />
-            <div class="text-wrapper-18">1.6K</div>
-            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view-2.png" />
-            <div class="text-wrapper-19">100</div>
-            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined-2.png" />
-            <div class="text-wrapper-20">14</div>
+            <div class="text-wrapper-18">{{ studyList[2].articleLikeCount }}</div>
+            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view.png" />
+            <div class="text-wrapper-19">{{ studyList[2].articleViewCount }}</div>
+            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined.png" />
+            <div class="text-wrapper-20">{{ studyList[2].articleReplyCount }}</div>
           </div>
         </div>
         <div v-if="shareInfoList.length" class="group-11">                                 <!-- 정보공유 1번 -->
