@@ -28,7 +28,7 @@ const router = createRouter({
             component: ModifyStudyGroupArticle
         },
         {
-            path: '/viewuserprofile',
+            path: '/viewuserprofile/:id',
             component: ViewUserProfile
         },
         {

@@ -120,7 +120,7 @@
         </div>
       </div>
       <div class="group-16">
-        <div class="text-wrapper-17">신동호</div>
+        <div v-if="value != null" class="text-wrapper-17">{{ value.userId }}</div>
         <div class="text-wrapper-18">한화시스템 백엔드 개발자</div>
         <p class="p">
           저는 한화 시스템에서 근무 중인 백엔드 개발자 입니다. 취미로는 애니 보는 것이며,<br />그리고 점심에는 공화춘
@@ -184,16 +184,17 @@
 <script setup>
   import { onMounted, ref } from 'vue';
   import axios from 'axios';
+  import { useRoute } from 'vue-router';
 
   const value = ref([]);
-  const name = ref('');
+  const route = useRoute();
 
   onMounted(async () => {
     try {
-      const response = await axios.get('http://localhost:8000/user/1');
-      const value = response.data;
-      const name = value.userId;
-      console.log(value.userId);
+      const response = await axios.get(`http://localhost:8000/user/${route.params.id}`);
+      value.value = response.data;
+      
+      console.log(value);
 
     } catch (error) {
       console.error("Error: " + error);
