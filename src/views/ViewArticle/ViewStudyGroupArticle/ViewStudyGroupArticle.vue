@@ -8,7 +8,7 @@
         <div class="overlap-wrapper">
           <div class="overlap">
             <div class="text-wrapper-2">내용</div>
-            <div class="rectangle"><!-- <button @click="fetchInfo">Test</button> --></div>
+            <div class="rectangle"></div>
           </div>
         </div>
         <div class="group-2">
@@ -28,7 +28,7 @@
           <div class="text-wrapper-6">2022.02.22</div>
         </div>
         <div class="group-6">
-          <div class="text-wrapper-7">정원수</div>
+          <button class="text-wrapper-7" @click="fetchInfo">정원수</button>
           <div class="rectangle-2"></div>
           <div class="text-wrapper-8">명</div>
         </div>
@@ -122,17 +122,17 @@
 </template>
 
 <script setup>
-  // import axios from 'axios';
+  import axios from 'axios';
 
-  // function fetchInfo() {
-  //   return axios.get('http://localhost:8000/studygroup')
-  //     .then(function(response) {
-  //       console.log(response);
-  //       return response.data;
-  //     });
+  function fetchInfo() {
+    return axios.get('http://localhost:8000/article-reply/article/studygroup')
+      .then(function(response) {
+        console.log(response);
+        return response.data;
+      });
 
-  //     const data = fetchInfo();
-  // }
+      const data = fetchInfo();
+    }
 </script>
 
 <style scoped>
