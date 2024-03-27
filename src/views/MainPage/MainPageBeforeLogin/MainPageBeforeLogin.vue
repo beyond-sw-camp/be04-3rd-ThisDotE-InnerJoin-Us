@@ -7,7 +7,7 @@
             <div class="overlap-group">
               <img class="innerjoin-us" src="@/assets/img/MainPage/MainPageBeforeLogin/innerjoin-us.png" /> <img class="image" src="@/assets/img/MainPage/MainPageBeforeLogin/image.png" />
             </div>
-            <div class="text-wrapper">스터디구인</div>
+            <button class="text-wrapper" @click="fetchInfo">스터디구인</button>
             <div class="text-wrapper-2">정보 공유</div>
             <div class="text-wrapper-3">질문</div>
             <div class="view">
@@ -159,8 +159,18 @@
   </main>
 </template>
 
-<script setup>
+<script setup >
+  import axios from 'axios';
+  
+  function fetchInfo() {
+  return axios.get('http://localhost:8000/article-reply/article')
+    .then(function(response) {
+      console.log(response);
+      return response.data;
+    });
 
+    const data = fetchInfo();
+}   
 </script>
 
 <style scoped>
