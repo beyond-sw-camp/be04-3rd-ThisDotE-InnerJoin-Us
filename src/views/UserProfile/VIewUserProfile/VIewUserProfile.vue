@@ -182,6 +182,23 @@
 </template>
 
 <script setup>
+  import { onMounted, ref } from 'vue';
+  import axios from 'axios';
+
+  const value = ref([]);
+  const name = ref('');
+
+  onMounted(async () => {
+    try {
+      const response = await axios.get('http://localhost:8000/user/1');
+      const value = response.data;
+      const name = value.userId;
+      console.log(value.userId);
+
+    } catch (error) {
+      console.error("Error: " + error);
+    }
+  })
 
 </script>
 

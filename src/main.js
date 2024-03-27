@@ -5,6 +5,7 @@ import App from './App.vue'
 import axios from 'axios'
 
 const app = createApp(App);
-app.provide('$axios', axios);
+app.config.globalProperties.$axios = axios
+// app.provide('$axios', axios);
 app.use(router);
 app.mount('#app');
