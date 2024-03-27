@@ -258,6 +258,6 @@
 </script>
 
 <style scoped>
-	@import "@/assets/css/ViewAllArticleRecently/ViewAllStudyGroupArticle/globals.css";
-	@import "@/assets/css/ViewAllArticleRecently/ViewAllStudyGroupArticle/style.css";
+    @import "@/assets/css/ViewAllArticleRecently/ViewAllStudyGroupArticle/globals.css";
+    @import "@/assets/css/ViewAllArticleRecently/ViewAllStudyGroupArticle/style.css";
 </style>
