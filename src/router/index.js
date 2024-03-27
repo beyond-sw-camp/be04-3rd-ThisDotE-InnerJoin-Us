@@ -20,7 +20,7 @@ const router = createRouter({
             component: WriteStudyGroupArticle
         },
         {
-            path: '/viewStudyGroupArticle',
+            path: '/viewStudyGroupArticle/:id',
             component: ViewStudyGroupArticle
         },
         {
