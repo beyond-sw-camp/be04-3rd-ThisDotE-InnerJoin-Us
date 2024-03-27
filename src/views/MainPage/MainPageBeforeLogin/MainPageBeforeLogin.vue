@@ -75,7 +75,7 @@
           <div  v-if="studyList.length" class="group-13">
             <div class="text-wrapper-15"   @click="changeRouter(studyList[0].articleId)">{{ studyList[0].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[0].articleCreateDate }}</div>
-            <div class="text-wrapper-17">{{ studyList[0].userList.userId }}</div>
+            <div class="text-wrapper-17" @click="changeRouterToProfile(studyList[0].userCode)">{{ studyList[0].userList.userId }}</div>
           </div>
           <div v-if="studyList.length" class="group-14">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like.png" />
@@ -189,8 +189,6 @@
           questionList.value.push(questValue.value[i]);
       }
 
-      console.log(questValue.value);
-
     } catch (error){
       console.error("Error: ", error);
     }
@@ -198,6 +196,10 @@
 
   function changeRouter(routerName){
     router.push(`/viewStudyGroupArticle/${routerName}`)
+  }
+
+  function changeRouterToProfile(routerName) {
+    router.push(`/viewuserprofile/${routerName}`)
   }
 
 </script>
