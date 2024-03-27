@@ -122,7 +122,25 @@
 </template>
 
 <script setup>
-  
+  import axios from 'axios';
+  import {ref, onMounted} from 'vue';
+  import {useRoute, useRouter} from 'vue-router'
+
+  const article = ref([]);
+  const route = useRoute();
+
+  onMounted(async() => {
+    try{
+      const response = await axios.get(`http://localhost:8000/article-reply/article/${route.params.id}`);
+    
+    }
+    catch(error) {
+      console.error("Error: ", error);
+    }
+  })
+
+
+
 </script>
 
 <style scoped>

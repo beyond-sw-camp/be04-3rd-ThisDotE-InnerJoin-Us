@@ -75,7 +75,7 @@
           <div  v-if="studyList.length" class="group-13">
             <div class="text-wrapper-15"   @click="changeRouter(studyList[0].articleId)">{{ studyList[0].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[0].articleCreateDate }}</div>
-            <div class="text-wrapper-17">{{ studyList[0].userCode }}</div>
+            <div class="text-wrapper-17">{{ studyList[0].userList.userId }}</div>
           </div>
           <div v-if="studyList.length" class="group-14">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like.png" />
@@ -89,9 +89,9 @@
         <div class="group-15">
           <img class="image-4" src="@/assets/img/MainPage/MainPageBeforeLogin/3.png" />
           <div v-if="studyList.length" class="group-16">
-            <div class="text-wrapper-15">{{ studyList[1].articleTitle }}</div>
+            <div class="text-wrapper-15" @click="changeRouter(studyList[1].articleId)">{{ studyList[1].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[1].articleCreateDate }}</div>
-            <div class="text-wrapper-17">{{ studyList[1].userCode }}</div>
+            <div class="text-wrapper-17">{{ studyList[1].userList.userId }}</div>
           </div>
           <div class="group-17">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like-1.png" />
@@ -105,9 +105,9 @@
         <div class="group-18">
           <img class="image-4" src="@/assets/img/MainPage/MainPageBeforeLogin/4.png" />
           <div v-if="studyList.length" class="group-16">
-            <div class="text-wrapper-15">{{ studyList[2].articleTitle }}</div>
+            <div class="text-wrapper-15" @click="changeRouter(studyList[2].articleId)">{{ studyList[2].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[2].articleCreateDate }}</div>
-            <div class="text-wrapper-17">{{ studyList[2].userCode }}</div>
+            <div class="text-wrapper-17">{{ studyList[2].userList.userId }}</div>
           </div>
           <div class="group-17">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like-2.png" />
@@ -122,37 +122,37 @@
           <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/1.png" />
           <div class="text-wrapper-12">{{ shareInfoList[0].articleTitle }}</div>
           <div class="text-wrapper-13">{{ shareInfoList[0].articleCreateDate }}</div>
-          <div class="text-wrapper-14">{{ shareInfoList[0].userCode }}</div>
+          <div class="text-wrapper-14">{{ shareInfoList[0].userList.userId }}</div>
         </div>
         <div v-if="shareInfoList.length" class="group-20">                                 <!-- 정보공유 2번 -->
           <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />     
           <div class="text-wrapper-12">{{ shareInfoList[1].articleTitle }}</div>
           <div class="text-wrapper-13">{{ shareInfoList[1].articleCreateDate }}</div>
-          <div class="text-wrapper-14">{{ shareInfoList[1].userCode }}</div>
+          <div class="text-wrapper-14">{{ shareInfoList[1].userList.userId }}</div>
         </div>
         <div v-if="shareInfoList.length" class="group-21">                                    <!-- 정보공유 3번 -->
             <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
             <div class="text-wrapper-12">{{ shareInfoList[2].articleTitle }}</div>
             <div class="text-wrapper-13">{{ shareInfoList[2].articleCreateDate }}</div>
-            <div class="text-wrapper-14">{{ shareInfoList[2].userCode }}</div>
+            <div class="text-wrapper-14">{{ shareInfoList[2].userList.userId }}</div>
           </div>
           <div v-if="questionList.length" class="group-22">                                    <!-- 질문 1번 -->
             <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
             <div class="text-wrapper-12">{{ questionList[0].articleTitle }}</div>
             <div class="text-wrapper-13">{{ questionList[0].articleCreateDate }}</div>
-            <div class="text-wrapper-14">{{ questionList[0].userCode }}</div>
+            <div class="text-wrapper-14">{{ questionList[0].userList.userId }}</div>
           </div>
         <div v-if="questionList.length" class="group-19">                                 <!-- 질문 2번 -->
           <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
           <div class="text-wrapper-12">{{ questionList[1].articleTitle }}</div>
           <div class="text-wrapper-13">{{ questionList[1].articleCreateDate }}</div>
-          <div class="text-wrapper-14">{{ questionList[1].userCode }}</div>
+          <div class="text-wrapper-14">{{ questionList[1].userList.userId }}</div>
         </div>
           <div v-if="questionList.length" class="group-23">                                    <!-- 질문 3번 -->
             <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
             <div class="text-wrapper-12">{{ questionList[2].articleTitle }}</div>
             <div class="text-wrapper-13">{{ questionList[2].articleCreateDate }}</div>
-            <div class="text-wrapper-14">{{ questionList[2].userCode }}</div>
+            <div class="text-wrapper-14">{{ questionList[2].userList.userId }}</div>
           </div>
       </div>
     </div>
@@ -161,7 +161,7 @@
 
 <script setup >
   import axios from 'axios';
-  import {ref, onMounted, computed} from 'vue';
+  import {ref, onMounted} from 'vue';
   import { useRouter } from 'vue-router';
 
   const router = useRouter();
