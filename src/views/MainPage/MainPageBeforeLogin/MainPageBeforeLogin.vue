@@ -8,7 +8,6 @@
               <img class="innerjoin-us" src="@/assets/img/MainPage/MainPageBeforeLogin/innerjoin-us.png" /> <img class="image" src="@/assets/img/MainPage/MainPageBeforeLogin/image.png" />
             </div>
             <div class="text-wrapper">스터디구인</div>
-            <div class="text-wrapper">스터디구인</div>
             <div class="text-wrapper-2">정보 공유</div>
             <div class="text-wrapper-3">질문</div>
             <div class="view">
@@ -162,16 +161,45 @@
 
 <script setup >
   import axios from 'axios';
-  
-  function fetchInfo() {
-  return axios.get('http://localhost:8000/article-reply/article')
-    .then(function(response) {
-      console.log(response);
-      return response.data;
-    });
+  import {ref, onMounted, computed} from 'vue';
+  import { useRouter } from 'vue-router';
 
-    const data = fetchInfo();
-}   
+  const router = useRouter();
+
+  const studyValue = ref([]);
+  const shareValue = ref([]);
+  const questValue = ref([]);
+  
+  const selectedIndex = ref(0);
+  const studyList = ref([]);
+  const shareInfoList = ref([]);
+  const questionList = ref([]);
+  
+  
+  onMounted(async() => {
+    try{
+      const response = await axios.get('http://localhost:8000/article-reply/main');
+      studyValue.value = response.data['1'];
+      shareValue.value = response.data['2'];
+      questValue.value = response.data['3'];
+
+      for (let i = 0; i < 4; i++) {
+          studyList.value.push(studyValue.value[i]);
+          shareInfoList.value.push(shareValue.value[i]);
+          questionList.value.push(questValue.value[i]);
+      }
+
+      console.log(questValue.value);
+
+    } catch (error){
+      console.error("Error: ", error);
+    }
+  })
+
+  function changeRouter(routerName){
+    router.push(`/viewStudyGroupArticle/${routerName}`)
+  }
+
 </script>
 
 <style scoped>
