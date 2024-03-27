@@ -19,7 +19,9 @@
             <div class="overlap-wrapper">
               <div class="overlap-2">
                 <div class="overlap-group-wrapper">
-                  <div class="overlap-group-3"><div class="text-wrapper-5">Log In</div></div>
+                  <div class="overlap-group-3">
+                    <div @click="navigateToLoginView" class="text-wrapper-5">Log In</div>
+                  </div>
                 </div>
                 <div class="rectangle"></div>
                 <div class="text-wrapper-6">Sign Up</div>
@@ -160,7 +162,13 @@
 </template>
 
 <script setup>
+  import { useRoute, useRouter } from "vue-router";
 
+  const router = useRouter();
+
+  function navigateToLoginView() {
+    router.push('/login');
+  }
 </script>
 
 <style scoped>
