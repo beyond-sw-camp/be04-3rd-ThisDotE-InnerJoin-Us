@@ -4,7 +4,7 @@
       <div class="div">
         <div class="group">
           <div class="rectangle">
-            <input type="text" v-model="title" placeholder="제목 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 50px;">
+            <input type="text" v-model="articleTitle" placeholder="제목 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 50px;">
           </div>
           <div class="text-wrapper">제목</div>
         </div>
@@ -26,7 +26,7 @@
         <div class="group-4">
           <div class="text-wrapper">내용</div>
           <div class="rectangle-2">
-            <input type="text" v-model="content" placeholder="내용 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 200px;">
+            <input type="text" v-model="articleContent" placeholder="내용 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 200px;">
           </div>
         </div>
         <div class="group-5">
@@ -60,7 +60,7 @@
         <div class="group-7">
           <div class="text-wrapper">정원수</div>
           <div class="rectangle-3">
-            <input v-model="memberCount" type="text" style="width: 85px; height: 30px; border-radius: 10px; border: 0px; background-color: #d9d9d94f;">
+            <input v-model="studygroupMemberMaxCount" type="number" style="width: 85px; height: 30px; border-radius: 10px; border: 0px; background-color: #d9d9d94f;">
           </div>
           <div class="text-wrapper-9">명</div>
         </div>
@@ -104,11 +104,20 @@
   export default {
     data() {
       return {
-        article_title: '',
-        article_content: '',
-        article_category: 3,
+        articleTitle: '',
+        articleContent: '',
+        articleCategory: 3,
+        articleViewCount: 0,
+        articleLikeCount: 0,
+        articleReplyCount: 0,
+        articleReportStatus: 0,
+        studygroupMemberMaxCount: '',
+        articleQuestionCategory: 0,
         user_code: 5,
-        studygroup_member_max_count: '',
+        studygroupId: 12,
+        studygroupCurrentMemberCount: 0,
+        studygroupPendingMemberCount: 0,
+        articleDeleteStatus: 0,
         form:''
       }
     },
@@ -117,31 +126,40 @@
         this.$router.push({path:'/writeStudyGroupArticle', query:this.body});
       },
       writeSAT() {
-        if(!this.title) {
+        if(!this.articleTitle) {
           alert("제목을 입력하세요.");
           this.$refs.title.focus();
-          return;
+          return false;
         }
-        if(!this.content) {
+        if(!this.articleContent) {
           alert("내용을 입력하세요.");
           this.$refs.content.focus();
-          return;
+          return false;
         }
-        if(!this.memberCount) {
+        if(!this.studygroupMemberMaxCount) {
           alert("정원수를 입력하세요.");
           this.$refs.memberCount.focus();
-          return;
+          return false;
         }
 
         this.form = {
           title: this.title,
           content: this.content,
-          category: this.article_category,
+          category: this.articleCategory,
+          viewCount: this.articleViewCount,
+          likeCount: this.articleLikeCount,
+          replyCount: this.articleReplyCount,
+          reportStatus: this.articleReportStatus,
+          memberCount: this.memberCount,
+          questionCategory: this.articleQuestionCategory,
           user_code: this.user_code,
-          studygroup_member_max_count: this.studygroup_member_max_count
+          studygroupId: this.studygroupId,
+          studygroupCurrentMemberCount: this.studygroupCurrentMemberCount,
+          studygroupPendingMemberCount: this.studygroupPendingMemberCount,
+          articleDeleteStatus: this.articleDeleteStatus
         }
 
-        this.$axios.post('http://localhost:5173/WriteStudyGroupArticle', this.form)
+        axios.post('http://localhost:8000/article-reply/article', this.form)
         .then((res) => {
           if(res.data.success) {
             alert('게시글이 등록되었습니다.');

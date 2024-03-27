@@ -59,59 +59,59 @@
           </div>
           <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"/>
         </div>
-        <div class="group-8">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+          <div class="group-8">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div class="text-wrapper-11">댓글 작성자</div>
+            <div class="text-wrapper-12">2022.02.23</div>
+            <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div class="text-wrapper-13">90</div>
+            <div class="ph-siren-light">
+              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+            </div>
           </div>
-        </div>
-        <div class="group-9">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+          <div class="group-9">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div class="text-wrapper-11">댓글 작성자</div>
+            <div class="text-wrapper-12">2022.02.23</div>
+            <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div class="text-wrapper-13">90</div>
+            <div class="ph-siren-light">
+              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+            </div>
           </div>
-        </div>
-        <div class="group-10">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+          <div class="group-10">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div class="text-wrapper-11">댓글 작성자</div>
+            <div class="text-wrapper-12">2022.02.23</div>
+            <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div class="text-wrapper-13">90</div>
+            <div class="ph-siren-light">
+              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+            </div>
           </div>
-        </div>
-        <div class="group-11">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png"/>
+          <div class="group-11">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div class="text-wrapper-11">댓글 작성자</div>
+            <div class="text-wrapper-12">2022.02.23</div>
+            <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div class="text-wrapper-13">90</div>
+            <div class="ph-siren-light">
+              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png"/>
+            </div>
           </div>
-        </div>
-        <div class="group-12">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" /></div>
-        </div>
+          <div class="group-12">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div class="text-wrapper-11">댓글 작성자</div>
+            <div class="text-wrapper-12">2022.02.23</div>
+            <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div class="text-wrapper-13">90</div>
+            <div class="ph-siren-light"><img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" /></div>
+          </div>
         <div class="group-13">
           <div class="text-wrapper-14">{userId}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
