@@ -8,7 +8,7 @@
         <div class="overlap-wrapper">
           <div class="overlap">
             <div class="text-wrapper-2">내용</div>
-            <div class="rectangle"></div>
+            <div class="rectangle"><!-- <button @click="fetchInfo">Test</button> --></div>
           </div>
         </div>
         <div class="group-2">
@@ -113,7 +113,7 @@
           <div class="ph-siren-light"><img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" /></div>
         </div>
         <div class="group-13">
-          <div class="text-wrapper-14">userNickName</div>
+          <div class="text-wrapper-14">{userId}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
         </div>
       </div>
@@ -122,7 +122,17 @@
 </template>
 
 <script setup>
+  // import axios from 'axios';
 
+  // function fetchInfo() {
+  //   return axios.get('http://localhost:8000/studygroup')
+  //     .then(function(response) {
+  //       console.log(response);
+  //       return response.data;
+  //     });
+
+  //     const data = fetchInfo();
+  // }
 </script>
 
 <style scoped>
