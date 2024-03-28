@@ -185,6 +185,14 @@
 
   const router = useRouter();
 
+  const isBeforeLogin = ref('');
+
+  onBeforeMount(() => {
+    console.log("onBeforeMount");
+
+    isBeforeLogin.value = !document.cookie;
+  });
+
   const studyValue = ref([]);
   const shareValue = ref([]);
   const questValue = ref([]);
@@ -223,16 +231,6 @@
   function changeRouterToViewAllStudyGroupArticle() {
     router.push('/viewAllStudyGroupArticle')
   }
-
-  const router = useRouter();
-
-  const isBeforeLogin = ref('');
-
-  onBeforeMount(() => {
-    console.log("onBeforeMount");
-
-    isBeforeLogin.value = !document.cookie;
-  });
 
   function navigateToLoginView() {
     router.push('/login');
