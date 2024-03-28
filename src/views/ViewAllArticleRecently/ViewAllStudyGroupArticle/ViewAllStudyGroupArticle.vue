@@ -53,7 +53,7 @@
 							</p>
 							<div class="text-wrapper-10">{{item?.studygroupRecruitmentDeadline}}</div>
 							<div class="text-wrapper-11">모집기한</div>
-							<p class="p">
+							<p @click="routerViewArticle(item?.articleId)" class="p">
 								{{ item?.articleTitle }}
 							</p>
 							<div class="img-wrapper">
@@ -148,13 +148,13 @@
 	}
 
 	function routeWriteArticle() {
-		router.push('/writeStudyGroupArticle')
+		router.push('/writeStudyGroupArticle');
 	}
 
-	function routerViewArticle() {
-		router.push('/viewStudyGroupArticle')
+	function routerViewArticle(routerName) {
+		router.push(`/viewStudyGroupArticle/${routerName}`);
 	}
-	
+
 </script>
 
 <style scoped>
