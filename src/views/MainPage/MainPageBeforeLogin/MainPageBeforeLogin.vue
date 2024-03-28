@@ -188,13 +188,12 @@
   const studyValue = ref([]);
   const shareValue = ref([]);
   const questValue = ref([]);
-  
+
   const selectedIndex = ref(0);
   const studyList = ref([]);
   const shareInfoList = ref([]);
   const questionList = ref([]);
-  
-  
+
   onMounted(async() => {
     try{
       const response = await axios.get('http://localhost:8000/article-reply/main');
