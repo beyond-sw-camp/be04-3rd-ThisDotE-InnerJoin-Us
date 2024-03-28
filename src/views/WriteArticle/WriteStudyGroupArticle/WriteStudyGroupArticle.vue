@@ -1,6 +1,7 @@
 <template>
   <body>
     <div class="screen">
+      <form v-on:submit.prevent="submitForm">
       <div class="div">
         <div class="group">
           <div class="rectangle">
@@ -68,7 +69,9 @@
           <div class="group-9">
             <div class="overlap-group-2">
               <div class="rectangle-4"></div>
-              <a href="WriteStudyGroupArticle" @click="writeSAT" class="text-wrapper-10">등록</a>
+              <a href="WriteStudyGroupArticle" @click="writeSAT" type="submit" class="text-wrapper-10">
+                <button >등록</button> 
+              </a>
             </div>
           </div>
           <div class="group-10">
@@ -96,31 +99,113 @@
           </div>
         </div>
       </div>
+    </form>
     </div>
   </body>
 </template>
 
 <script>
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
-  import axios from 'axios';
-  import {ref, onMounted} from 'vue';
-  import {useRoute, useRouter} from 'vue-router';
+const router = useRouter();
 
-  const article = ref([
 
-  ]);
-  const route = useRoute();
+const routerMain = () => {
+        router.push('/');
+      };
 
-  onMounted(async() => {
-    try{
-      const reponse = await axios.post(`http://localhost:8000/article-reply/article/${route.params.id}`);
-      reply.value = response.data;
-      console.log(reply.value);
-    }
-    catch(errpr) {
-      console.log("Error: " + error);
-    }
-  })
+
+export default {
+  setup() {
+    const articleTitle = ref('');
+    const articleContent = ref('');
+    const studygroupMemberMaxCount = ref('');
+    const route = useRoute();
+    const router = useRouter();
+
+    const submitForm = async () => {
+      const data = {
+        articleTitle: articleTitle.value,
+        articleContent: articleContent.value,
+        studygroupMemberMaxCount: studygroupMemberMaxCount.value,
+        articleCategory: 3,
+        articleViewCount: 2,
+        articleLikeCount: 5,
+        articleReplyCount: 6,
+        articleReportStatus: 3,
+        articleQuestionCategory: 34,
+        userCode: 6,
+        studygroupId: 12,
+        studygroupCurrentMemberCount: 1,
+        studygroupPendingMemberCount: 2,
+        articleDeleteStatus: 0
+      };
+
+      const url = `http://localhost:8000/article-reply/article`;
+
+      try {
+        const response = await axios.post(url, data);
+        console.log(response); // 로그 출력
+        router.push('/ViewAllStudyGroupArticle'); // 현재 페이지 새로고침
+      } catch (error) {
+        console.error(error); // 오류 처리
+      }
+    };
+
+    return {
+      articleTitle,
+      articleContent,
+      studygroupMemberMaxCount,
+      submitForm
+    };
+  },
+}
+
+// export default {
+//   data() {
+//     return {
+//       articleTitle: '',
+//       articleContent: '',
+//       studygroupMemberMaxCount: '',
+//     }
+//   },
+//   methods: {
+//     submitForm() {
+//       const route = useRoute();
+
+//       const data = {
+//         articleTitle: this.articleTitle,
+//         articleContent: this.articleContent,
+//         studygroupMemberMaxCount: this.studygroupMemberMaxCount,
+//         articleCategory: 3,
+//         articleViewCount: 2,
+//         articleLikeCount: 5,
+//         articleReplyCount: 6,
+//         articleReportStatus: 3,
+//         articleQuestionCategory: 34,
+//         userCode: 6,
+//         studygroupId: 12,
+//         studygroupCurrentMemberCount: 1,
+//         studygroupPendingMemberCount: 2,
+//         articleDeleteStatus: 0
+//       }
+
+//       const url = `http://localhost:8000/article-reply/article`;
+
+//       axios.post(url, data);  
+//     }
+//   },
+//   mounted() {
+//   },
+// }
+
+
+
+// function routerMain(){
+//   router.push('/');
+// }
 
 </script>
 

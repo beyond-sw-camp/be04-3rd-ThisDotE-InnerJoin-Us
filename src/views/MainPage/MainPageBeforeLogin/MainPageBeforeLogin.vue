@@ -7,7 +7,7 @@
             <div class="overlap-group">
               <img class="innerjoin-us" src="@/assets/img/MainPage/MainPageBeforeLogin/innerjoin-us.png" /> <img class="image" src="@/assets/img/MainPage/MainPageBeforeLogin/image.png" />
             </div>
-            <div class="text-wrapper">스터디구인</div>
+            <div @click="changeRouterToViewAllStudyGroupArticle()" class="text-wrapper">스터디구인</div>
             <div class="text-wrapper-2">정보 공유</div>
             <div class="text-wrapper-3">질문</div>
             <div class="view">
@@ -37,7 +37,7 @@
             <div class="text-wrapper-8">스터디 구인</div>
             <div class="group-4">
               <div class="overlap-group-4">
-                <div class="text-wrapper-9">더보기</div>
+                <div @click="changeRouterToViewAllStudyGroupArticle()" class="text-wrapper-9">더보기</div>
                 <img class="line-2" src="@/assets/img/MainPage/MainPageBeforeLogin/line-5.png" />
               </div>
             </div>
@@ -91,15 +91,15 @@
           <div v-if="studyList.length" class="group-16">
             <div class="text-wrapper-15" @click="changeRouter(studyList[1].articleId)">{{ studyList[1].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[1].articleCreateDate }}</div>
-            <div class="text-wrapper-17">{{ studyList[1].userList.userId }}</div>
+            <div class="text-wrapper-17" @click="changeRouterToProfile(studyList[1].userCode)">{{ studyList[1].userList.userId }}</div>
           </div>
-          <div class="group-17">
+          <div v-if="studyList.length" class="group-17">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like-1.png" />
-            <div class="text-wrapper-18">1.6K</div>
-            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view-1.png" />
-            <div class="text-wrapper-19">100</div>
-            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined-1.png" />
-            <div class="text-wrapper-20">14</div>
+            <div class="text-wrapper-18">{{ studyList[1].articleLikeCount }}</div>
+            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view.png" />
+            <div class="text-wrapper-19">{{ studyList[1].articleViewCount }}</div>
+            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined.png" />
+            <div class="text-wrapper-20">{{ studyList[1].articleReplyCount }}</div>
           </div>
         </div>
         <div class="group-18">
@@ -107,15 +107,15 @@
           <div v-if="studyList.length" class="group-16">
             <div class="text-wrapper-15" @click="changeRouter(studyList[2].articleId)">{{ studyList[2].articleTitle }}</div>
             <div class="text-wrapper-16">{{ studyList[2].articleCreateDate }}</div>
-            <div class="text-wrapper-17">{{ studyList[2].userList.userId }}</div>
+            <div class="text-wrapper-17" @click="changeRouterToProfile(studyList[2].userCode)">{{ studyList[2].userList.userId }}</div>
           </div>
-          <div class="group-17">
+          <div v-if="studyList.length" class="group-17">
             <img class="mdi-like" src="@/assets/img/MainPage/MainPageBeforeLogin/mdi-like-2.png" />
-            <div class="text-wrapper-18">1.6K</div>
-            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view-2.png" />
-            <div class="text-wrapper-19">100</div>
-            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined-2.png" />
-            <div class="text-wrapper-20">14</div>
+            <div class="text-wrapper-18">{{ studyList[2].articleLikeCount }}</div>
+            <img class="carbon-view" src="@/assets/img/MainPage/MainPageBeforeLogin/carbon-view.png" />
+            <div class="text-wrapper-19">{{ studyList[2].articleViewCount }}</div>
+            <img class="ant-design-message" src="@/assets/img/MainPage/MainPageBeforeLogin/ant-design-message-outlined.png" />
+            <div class="text-wrapper-20">{{ studyList[2].articleReplyCount }}</div>
           </div>
         </div>
         <div v-if="shareInfoList.length" class="group-11">                                 <!-- 정보공유 1번 -->
@@ -200,6 +200,10 @@
 
   function changeRouterToProfile(routerName) {
     router.push(`/viewuserprofile/${routerName}`)
+  }
+
+  function changeRouterToViewAllStudyGroupArticle() {
+    router.push('/viewallstudygrouparticle')
   }
 
 </script>
