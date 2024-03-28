@@ -101,79 +101,100 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        articleTitle: '',
-        articleContent: '',
-        articleCategory: 3,
-        articleViewCount: 0,
-        articleLikeCount: 0,
-        articleReplyCount: 0,
-        articleReportStatus: 0,
-        studygroupMemberMaxCount: '',
-        articleQuestionCategory: 0,
-        user_code: 5,
-        studygroupId: 12,
-        studygroupCurrentMemberCount: 0,
-        studygroupPendingMemberCount: 0,
-        articleDeleteStatus: 0,
-        form:''
-      }
-    },
-    methods: {
-      gobackList() {
-        this.$router.push({path:'/writeStudyGroupArticle', query:this.body});
-      },
-      writeSAT() {
-        if(!this.articleTitle) {
-          alert("제목을 입력하세요.");
-          this.$refs.title.focus();
-          return false;
-        }
-        if(!this.articleContent) {
-          alert("내용을 입력하세요.");
-          this.$refs.content.focus();
-          return false;
-        }
-        if(!this.studygroupMemberMaxCount) {
-          alert("정원수를 입력하세요.");
-          this.$refs.memberCount.focus();
-          return false;
-        }
+  // export default {
+  //   data() {
+  //     return {
+  //       articleTitle: '',
+  //       articleContent: '',
+  //       articleCategory: 3,
+  //       articleViewCount: 0,
+  //       articleLikeCount: 0,
+  //       articleReplyCount: 0,
+  //       articleReportStatus: 0,
+  //       studygroupMemberMaxCount: '',
+  //       articleQuestionCategory: 0,
+  //       user_code: 5,
+  //       studygroupId: 12,
+  //       studygroupCurrentMemberCount: 0,
+  //       studygroupPendingMemberCount: 0,
+  //       articleDeleteStatus: 0,
+  //       form:''
+  //     }
+  //   },
+  //   methods: {
+  //     gobackList() {
+  //       this.$router.push({path:'/writeStudyGroupArticle', query:this.body});
+  //     },
+  //     writeSAT() {
+  //       if(!this.articleTitle) {
+  //         alert("제목을 입력하세요.");
+  //         this.$refs.title.focus();
+  //         return false;
+  //       }
+  //       if(!this.articleContent) {
+  //         alert("내용을 입력하세요.");
+  //         this.$refs.content.focus();
+  //         return false;
+  //       }
+  //       if(!this.studygroupMemberMaxCount) {
+  //         alert("정원수를 입력하세요.");
+  //         this.$refs.memberCount.focus();
+  //         return false;
+  //       }
 
-        this.form = {
-          title: this.title,
-          content: this.content,
-          category: this.articleCategory,
-          viewCount: this.articleViewCount,
-          likeCount: this.articleLikeCount,
-          replyCount: this.articleReplyCount,
-          reportStatus: this.articleReportStatus,
-          memberCount: this.memberCount,
-          questionCategory: this.articleQuestionCategory,
-          user_code: this.user_code,
-          studygroupId: this.studygroupId,
-          studygroupCurrentMemberCount: this.studygroupCurrentMemberCount,
-          studygroupPendingMemberCount: this.studygroupPendingMemberCount,
-          articleDeleteStatus: this.articleDeleteStatus
-        }
+  //       this.form = {
+  //         title: this.title,
+  //         content: this.content,
+  //         category: this.articleCategory,
+  //         viewCount: this.articleViewCount,
+  //         likeCount: this.articleLikeCount,
+  //         replyCount: this.articleReplyCount,
+  //         reportStatus: this.articleReportStatus,
+  //         memberCount: this.memberCount,
+  //         questionCategory: this.articleQuestionCategory,
+  //         user_code: this.user_code,
+  //         studygroupId: this.studygroupId,
+  //         studygroupCurrentMemberCount: this.studygroupCurrentMemberCount,
+  //         studygroupPendingMemberCount: this.studygroupPendingMemberCount,
+  //         articleDeleteStatus: this.articleDeleteStatus
+  //       }
 
-        axios.post('http://localhost:8000/article-reply/article', this.form)
-        .then((res) => {
-          if(res.data.success) {
-            alert('게시글이 등록되었습니다.');
-            this.writeSAT();
-          } else {
-            alert('게시글 등록에 실패했습니다. 다시 시도해주세요.');
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-      }
+  //       axios.post('http://localhost:8000/article-reply/article', this.form)
+  //       .then((res) => {
+  //         if(res.data.success) {
+  //           alert('게시글이 등록되었습니다.');
+  //           this.writeSAT();
+  //         } else {
+  //           alert('게시글 등록에 실패했습니다. 다시 시도해주세요.');
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       })
+  //     }
+  //   }
+  // }
+
+  import axios from 'axios';
+  import {ref, onMounted} from 'vue';
+  import {useRoute, useRouter} from 'vue-router';
+
+  const article = ref([
+
+  ]);
+  const route = useRoute();
+
+  onMounted(async() => {
+    try{
+      const reponse = await axios.post(`http://localhost:8000/article-reply/article/${route.params.id}`);
+      reply.value = response.data;
+      console.log(reply.value);
     }
-  }
+    catch(errpr) {
+      console.log("Error: " + error);
+    }
+  })
+
 </script>
 
 <style scoped>

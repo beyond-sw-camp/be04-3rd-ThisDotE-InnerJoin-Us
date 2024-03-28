@@ -14,22 +14,22 @@
         <div class="group-2">
           <div class="group-3">
             <img class="carbon-view" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/carbon-view.png" />
-            <div class="text-wrapper-3">490</div>
+            <div v-if="article != null" class="text-wrapper-3">{{ article.articleViewCount }}</div>
           </div>
           <div class="group-4">
             <img class="vector" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector.png" />
-            <div class="text-wrapper-4">15</div>
+            <div v-if="article != null" class="text-wrapper-4">{{ article.articleReplyCount }}</div>
           </div>
           <div class="group-5">
             <img class="mdi-like" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like.png" />
-            <div class="text-wrapper-5">90</div>
+            <div v-if="article != null" class="text-wrapper-5">{{ article.articleLikeCount }}</div>
           </div>
           <img class="image" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/image.png" />
-          <div class="text-wrapper-6">2022.02.22</div>
+          <div v-if="article !=null" class="text-wrapper-6">{{ article.articleCreateDate }}</div>
         </div>
         <div class="group-6">
-          <button class="text-wrapper-7" @click="fetchInfo">정원수</button>
-          <div class="rectangle-2"></div>
+          <div class="text-wrapper-7" @click="fetchInfo">정원수</div>
+          <div v-if="article != null" type="number" class="rectangle-2" style="text-align: center;">{{ article.studygroupMemberMaxCount }}</div>
           <div class="text-wrapper-8">명</div>
         </div>
         <div class="overlap-group-wrapper">
@@ -59,61 +59,20 @@
           </div>
           <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"/>
         </div>
-        <div class="group-8">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+
+          <div class="group-8">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
+            <div class="text-wrapper-12">2022.02.23</div>
+            <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0].replyContent}}</p>
+            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0].replyLikeCount}}</div>
+            <div class="ph-siren-light">
+              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+            </div>
           </div>
-        </div>
-        <div class="group-9">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
-          </div>
-        </div>
-        <div class="group-10">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
-          </div>
-        </div>
-        <div class="group-11">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light">
-            <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png"/>
-          </div>
-        </div>
-        <div class="group-12">
-          <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
-          <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
-          <div class="ph-siren-light"><img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" /></div>
-        </div>
         <div class="group-13">
-          <div class="text-wrapper-14">userNickName</div>
+          <div v-if="article.userList != null" class="text-wrapper-14">{{ article.userList.userId }}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
         </div>
       </div>
@@ -141,8 +100,6 @@
       console.error("Error: ", error);
     }
   })
-
-
 
 </script>
 
