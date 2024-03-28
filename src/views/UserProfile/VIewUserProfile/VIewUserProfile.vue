@@ -162,7 +162,7 @@
       <div class="group-23">
         <div class="overlap-5">
           <div class="overlap-6">
-            <img class="innerjoin-us" src="../../../../src/assets/img/UserProfile/ViewUserProfile/innerjoin-us.png" /> 
+            <img @click="routerMain()" class="innerjoin-us" src="../../../../src/assets/img/UserProfile/ViewUserProfile/innerjoin-us.png" /> 
             <img class="image-3" src="../../../../src/assets/img/UserProfile/ViewUserProfile/7.png" />
           </div>
           <div class="text-wrapper-23">스터디구인</div>
@@ -185,7 +185,7 @@
 
   import axios from 'axios';
   import { ref, onMounted } from 'vue';
-  import { useRoute } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
 
   const profile = ref([
     
@@ -196,6 +196,7 @@
 
 
   const route = useRoute();
+  const router = useRouter();
 
   onMounted(async() => {
     try {
@@ -210,6 +211,9 @@
     }
   })
 
+  function routerMain() {
+    router.push('/');
+  }
 </script>
 
 <style scoped>

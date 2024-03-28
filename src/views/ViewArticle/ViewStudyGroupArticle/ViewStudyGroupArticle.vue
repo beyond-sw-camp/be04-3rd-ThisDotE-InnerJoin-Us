@@ -64,7 +64,7 @@
           <div v-for="reply in replies" :key="reply.replyId">
             <div class="group-8">
               <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-              <div class="text-wrapper-11">{{ reply?.responseUser.userId }}</div>
+              <div @click="routerToProfile(reply?.userCode)" class="text-wrapper-11">{{ reply?.responseUser.userId }}</div>
               <div class="text-wrapper-12">{{ reply?.replyCreatedDate }}</div>
               <p class="p">{{ reply?.replyContent }}</p>
               <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
@@ -76,24 +76,8 @@
           </div>
         </div>
 
-
-
-          <!-- <div class="group-8">
-            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-            <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0]?.responseUser.userId}}</div>
-            <div class="text-wrapper-12">2022.02.23</div>
-            <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0]?.replyContent}}</p>
-            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-            <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0]?.replyLikeCount}}</div>
-            <div class="ph-siren-light">
-              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
-            </div>
-          </div> -->
-
-
-
         <div class="group-13">
-          <div v-if="article.userList != null" class="text-wrapper-14">ID: {{ article.userList.userId }}</div>
+          <div v-if="article.userList != null" class="text-wrapper-14">{{ article.userList.userId }}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
         </div>
       </div>
@@ -131,6 +115,10 @@
 
   function routerMain (){
     router.push(`/`)
+  }
+
+  function routerToProfile(routerName) {
+		router.push(`/viewuserprofile/${routerName}`);
   }
 
   const submitForm = async () => {

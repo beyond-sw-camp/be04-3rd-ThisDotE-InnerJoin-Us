@@ -269,7 +269,7 @@
   position: relative;
   width: 706px;
   height: 108px;
-  top: 50px;
+  top: 20px;
   /* left: 365px; */
   flex-direction: column;
 }
@@ -311,6 +311,7 @@
   font-size: 13px;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .text-wrapper-8 {
@@ -361,6 +362,7 @@
   font-size: 12px;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .text-wrapper-10 {
