@@ -340,11 +340,11 @@
   height: 500px;
   margin-top: 670px;
   margin-left: 445px;
+  border: 1px solid black;
 }
 
 .screen .group-7 {
-  display: inline;
-  position: absolute;
+  position: relative;
   width: 545px;
   height: 91px;
   top: 583px;

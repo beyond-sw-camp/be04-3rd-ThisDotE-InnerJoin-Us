@@ -34,7 +34,7 @@
         </div>
         <div class="overlap-group-wrapper">
           <div class="overlap-2">
-            <div @click="routerMain()" class="overlap-3">
+            <div class="overlap-3">
               <img class="innerjoin-us" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/innerjoin-us.png" />
               <img class="img" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/1.png" />
             </div>
@@ -50,28 +50,52 @@
           </div>
         </div>
         <div class="group-7">
-          <div class="div-wrapper">
-            <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
-          </div>
-          <img class="image-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/img/2.png" />
-          <div class="rectangle-3">
-            <input type="text" v-model="replyContent" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
-          </div>
-          <img class="mingcute-send-plane" @click="submitForm" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png">
-        </img>
-        </div>
-
-          <div class="group-8">
-            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-            <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0]?.responseUser.userId}}</div>
-            <div class="text-wrapper-12">2022.02.23</div>
-            <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0]?.replyContent}}</p>
-            <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-            <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0]?.replyLikeCount}}</div>
-            <div class="ph-siren-light">
-              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+            <div class="div-wrapper">
+              <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
             </div>
+            <img class="image-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/img/2.png" />
+            <div class="rectangle-3">
+              <input type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
+            </div>
+            <button type="button">
+              <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png" onclick="alert('클릭!')"/>
+            </button>
           </div>
+        <div class="group-99">
+          <!-- <div class="group-8">
+              <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+              <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
+              <div v-if="article.replyDTOList" class="text-wrapper-12">{{article.replyDTOList[0].replyCreateDate}}</div>
+              <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0].replyContent}}</p>
+              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+              <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0].replyLikeCount}}</div>
+              <div class="ph-siren-light">
+                <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+              </div>
+          </div> -->
+          <div class="group-8">
+              <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+              <div class="text-wrapper-11">userId</div>
+              <div class="text-wrapper-12">날짜</div>
+              <p class="p">내용</p>
+              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+              <div class="text-wrapper-13">66</div>
+              <div class="ph-siren-light">
+                <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+              </div>
+          </div>
+          <div class="group-9">
+              <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+              <div class="text-wrapper-11">userId</div>
+              <div class="text-wrapper-12">날짜</div>
+              <p class="p">내용</p>
+              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+              <div class="text-wrapper-13">66</div>
+              <div class="ph-siren-light">
+                <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+              </div>
+          </div>
+      </div>
         <div class="group-13">
           <div v-if="article.userList != null" class="text-wrapper-14">ID: {{ article.userList.userId }}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
@@ -90,48 +114,17 @@
     
   ]);
   const route = useRoute();
-  const router = useRouter();
-
-  const replyContent = ref('');
 
   onMounted(async() => {
     try{
       const response = await axios.get(`http://localhost:8000/article-reply/article/${route.params.id}`);
       article.value = response.data;
       console.log(article.value);
-      console.log(article.value.articleId);
     }
     catch(error) {
       console.error("Error: ", error);
     }
   })
-
-  function routerMain (){
-    router.push(`/`)
-  }
-
-  const submitForm = async () => {
-  // 라우트 파라미터에서 articleId 추출
-
-  const data = {
-    replyContent: replyContent.value,
-    articleId: article.value.articleId,
-    userCode: '13'
-  }
-
-  const url = `http://localhost:8000/article-reply/reply`
-
-  // axios.post를 사용하여 비동기 요청 전송
-  // 응답 처리를 위한 로직을 추가해야 함
-  try {
-    const response = await axios.post(url, data)
-    console.log(response) // 개발자가 확인할 수 있도록 콘솔에 로그 출력
-    router.go(0)
-
-  } catch (error) {
-    console.error(error) // 오류 처리
-  }
-}
 
 </script>
 
