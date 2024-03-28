@@ -677,7 +677,7 @@
   width: 43px;
   height: 40px;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #7f94e1;
   border-radius: 21.5px/20px;
 }
@@ -687,5 +687,6 @@
   width: 19px;
   height: 17px;
   top: 11px;
-  left: 11px;
+  right: 12px;
+}
 }
