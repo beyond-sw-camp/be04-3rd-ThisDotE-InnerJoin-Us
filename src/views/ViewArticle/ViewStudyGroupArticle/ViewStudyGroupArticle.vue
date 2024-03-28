@@ -5,6 +5,10 @@
         <div class="group">
           <div class="overlap-group"><div v-show="article != null" class="text-wrapper">{{ article?.articleTitle }}</div></div>
         </div>
+        <div class="group-13">
+          <div v-if="article.userList != null" class="text-wrapper-14">ID: {{ article.userList.userId }}</div>
+          <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
+        </div>
         <div class="overlap-wrapper">
           <div class="overlap">
             <div v-if="article != null" class="text-wrapper-2">{{ article?.articleContent }}</div>
@@ -54,6 +58,8 @@
               <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
               <input class="rectangle-3" type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
             <button class="mingcute-send-plane" type="button">클릭</button>
+            <div v-for="item in items" :key="item.articleid">
+            </div>
           </div>
           <div class="group-8">
               <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
@@ -66,11 +72,19 @@
                 <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
               </div>
           </div>
+          
+          <!-- <div class="group-8">
+            <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+            <div v-if="article.replyDTOList" class="text-wrapper-11">{{item?.responseUser.userId}}</div>
+            <div v-if="article.replyDTOList" class="text-wrapper-12">{{item?.replyCreateDate}}</div>
+            <p v-if="article.replyDTOList" class="p">{{item?.replyContent}}</p>
+              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+            <div v-if="article.replyDTOList" class="text-wrapper-13">{{item?.replyLikeCount}}</div>
+            <div class="ph-siren-light">
+              <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+            </div>
+          </div> -->
       </div>
-        <div class="group-13">
-          <div v-if="article.userList != null" class="text-wrapper-14">ID: {{ article.userList.userId }}</div>
-          <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
-        </div>
       </div>
     </div>
   </body>
@@ -81,9 +95,8 @@
   import {ref, onMounted} from 'vue';
   import {useRoute, useRouter} from 'vue-router'
 
-  const article = ref([
-    
-  ]);
+  const article = ref([]);
+
   const route = useRoute();
 
   onMounted(async() => {
@@ -96,6 +109,7 @@
       console.error("Error: ", error);
     }
   })
+
 
 </script>
 
