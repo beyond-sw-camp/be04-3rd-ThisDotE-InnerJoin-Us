@@ -49,6 +49,8 @@
             </div>
           </div>
         </div>
+
+
         <div class="group-7">
           <div class="div-wrapper">
             <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
@@ -57,11 +59,26 @@
           <div class="rectangle-3">
             <input type="text" v-model="replyContent" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
           </div>
-          <img class="mingcute-send-plane" @click="submitForm" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png">
-        </img>
+          <img class="mingcute-send-plane" @click="submitForm" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"></img>
+
+          <div v-for="reply in replies" :key="reply.replyId">
+            <div class="group-8">
+              <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
+              <div class="text-wrapper-11">{{ reply?.responseUser.userId }}</div>
+              <div class="text-wrapper-12">{{ reply?.replyCreatedDate }}</div>
+              <p class="p">{{ reply?.replyContent }}</p>
+              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
+              <div class="text-wrapper-13">{{ reply?.replyLikeCount }}</div>
+              <div class="ph-siren-light">
+                <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
+              </div>
+            </div>
+          </div>
         </div>
 
-          <div class="group-8">
+
+
+          <!-- <div class="group-8">
             <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
             <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0]?.responseUser.userId}}</div>
             <div class="text-wrapper-12">2022.02.23</div>
@@ -71,7 +88,10 @@
             <div class="ph-siren-light">
               <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
             </div>
-          </div>
+          </div> -->
+
+
+
         <div class="group-13">
           <div v-if="article.userList != null" class="text-wrapper-14">ID: {{ article.userList.userId }}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
@@ -89,6 +109,8 @@
   const article = ref([
     
   ]);
+  const replies = ref([]);
+
   const route = useRoute();
   const router = useRouter();
 
@@ -98,6 +120,7 @@
     try{
       const response = await axios.get(`http://localhost:8000/article-reply/article/${route.params.id}`);
       article.value = response.data;
+      replies.value = response.data.replyDTOList;
       console.log(article.value);
       console.log(article.value.articleId);
     }
