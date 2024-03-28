@@ -4,7 +4,7 @@
       <div class="div">
         <div class="group">
           <div class="rectangle">
-            <input type="text" placeholder="제목 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 50px;">
+            <input type="text" v-model="articleTitle" placeholder="제목 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 50px;">
           </div>
           <div class="text-wrapper">제목</div>
         </div>
@@ -26,7 +26,7 @@
         <div class="group-4">
           <div class="text-wrapper">내용</div>
           <div class="rectangle-2">
-            <input type="text" placeholder="내용 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 200px;">
+            <input type="text" v-model="articleContent" placeholder="내용 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 200px;">
           </div>
         </div>
         <div class="group-5">
@@ -60,7 +60,7 @@
         <div class="group-7">
           <div class="text-wrapper">정원수</div>
           <div class="rectangle-3">
-            <input type="text" style="width: 85px; height: 30px; border-radius: 10px; border: 0px; background-color: #d9d9d94f;">
+            <input v-model="studygroupMemberMaxCount" type="number" style="width: 85px; height: 30px; border-radius: 10px; border: 0px; background-color: #d9d9d94f;">
           </div>
           <div class="text-wrapper-9">명</div>
         </div>
@@ -68,13 +68,13 @@
           <div class="group-9">
             <div class="overlap-group-2">
               <div class="rectangle-4"></div>
-              <div class="text-wrapper-10">등록</div>
+              <a href="WriteStudyGroupArticle" @click="writeSAT" class="text-wrapper-10">등록</a>
             </div>
           </div>
           <div class="group-10">
             <div class="overlap-group-2">
               <div class="rectangle-5"></div>
-              <div class="text-wrapper-10">취소</div>
+              <a href="ViewAllStudyGroupArticle" @click="gobackList" class="text-wrapper-10">취소</a>
             </div>
           </div>
         </div>
@@ -100,7 +100,100 @@
   </body>
 </template>
 
-<script setup>
+<script>
+  // export default {
+  //   data() {
+  //     return {
+  //       articleTitle: '',
+  //       articleContent: '',
+  //       articleCategory: 3,
+  //       articleViewCount: 0,
+  //       articleLikeCount: 0,
+  //       articleReplyCount: 0,
+  //       articleReportStatus: 0,
+  //       studygroupMemberMaxCount: '',
+  //       articleQuestionCategory: 0,
+  //       user_code: 5,
+  //       studygroupId: 12,
+  //       studygroupCurrentMemberCount: 0,
+  //       studygroupPendingMemberCount: 0,
+  //       articleDeleteStatus: 0,
+  //       form:''
+  //     }
+  //   },
+  //   methods: {
+  //     gobackList() {
+  //       this.$router.push({path:'/writeStudyGroupArticle', query:this.body});
+  //     },
+  //     writeSAT() {
+  //       if(!this.articleTitle) {
+  //         alert("제목을 입력하세요.");
+  //         this.$refs.title.focus();
+  //         return false;
+  //       }
+  //       if(!this.articleContent) {
+  //         alert("내용을 입력하세요.");
+  //         this.$refs.content.focus();
+  //         return false;
+  //       }
+  //       if(!this.studygroupMemberMaxCount) {
+  //         alert("정원수를 입력하세요.");
+  //         this.$refs.memberCount.focus();
+  //         return false;
+  //       }
+
+  //       this.form = {
+  //         title: this.title,
+  //         content: this.content,
+  //         category: this.articleCategory,
+  //         viewCount: this.articleViewCount,
+  //         likeCount: this.articleLikeCount,
+  //         replyCount: this.articleReplyCount,
+  //         reportStatus: this.articleReportStatus,
+  //         memberCount: this.memberCount,
+  //         questionCategory: this.articleQuestionCategory,
+  //         user_code: this.user_code,
+  //         studygroupId: this.studygroupId,
+  //         studygroupCurrentMemberCount: this.studygroupCurrentMemberCount,
+  //         studygroupPendingMemberCount: this.studygroupPendingMemberCount,
+  //         articleDeleteStatus: this.articleDeleteStatus
+  //       }
+
+  //       axios.post('http://localhost:8000/article-reply/article', this.form)
+  //       .then((res) => {
+  //         if(res.data.success) {
+  //           alert('게시글이 등록되었습니다.');
+  //           this.writeSAT();
+  //         } else {
+  //           alert('게시글 등록에 실패했습니다. 다시 시도해주세요.');
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       })
+  //     }
+  //   }
+  // }
+
+  import axios from 'axios';
+  import {ref, onMounted} from 'vue';
+  import {useRoute, useRouter} from 'vue-router';
+
+  const article = ref([
+
+  ]);
+  const route = useRoute();
+
+  onMounted(async() => {
+    try{
+      const reponse = await axios.post(`http://localhost:8000/article-reply/article/${route.params.id}`);
+      reply.value = response.data;
+      console.log(reply.value);
+    }
+    catch(errpr) {
+      console.log("Error: " + error);
+    }
+  })
 
 </script>
 
