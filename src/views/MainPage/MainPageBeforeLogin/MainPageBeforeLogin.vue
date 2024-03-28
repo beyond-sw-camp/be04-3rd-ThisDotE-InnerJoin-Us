@@ -66,7 +66,9 @@
           </div>
         </div>
         <div class="group-9">
-          <div class="text-wrapper-11">우주링크</div>
+          <div class="text-wrapper-11">
+            <a href="https://baekjoon-auto-notion-v4.streamlit.app/" target="_blank">Baekjoon&NoBreak;-&NoBreak;to&NoBreak;-&NoBreak;Notion</a>
+          </div>
           <img class="line" src="@/assets/img/MainPage/MainPageBeforeLogin/line-4.png" />
           <img class="group-10" src="@/assets/img/MainPage/MainPageBeforeLogin/group-19.png" />
         </div>

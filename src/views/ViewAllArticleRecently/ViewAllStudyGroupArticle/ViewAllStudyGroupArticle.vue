@@ -43,7 +43,7 @@
 						<div class="group-5">
 							<img class="image-3" src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/2.png" />
 							<div class="overlap-4">
-								<div class="text-wrapper-7">{{ item?.userList?.userId }}</div>
+								<div @click="routerToProfile(item?.userCode)" class="text-wrapper-7">{{ item?.userList?.userId }}</div>
 								<div class="text-wrapper-8">{{ item?.articleCreateDate }}</div>
 							</div>
 							<div class="text-wrapper-9">모집정원</div>
@@ -154,6 +154,10 @@
 	function routerViewArticle(routerName) {
 		router.push(`/viewStudyGroupArticle/${routerName}`);
 	}
+
+	function routerToProfile(routerName) {
+		router.push(`/viewuserprofile/${routerName}`);
+    }
 
 </script>
 
