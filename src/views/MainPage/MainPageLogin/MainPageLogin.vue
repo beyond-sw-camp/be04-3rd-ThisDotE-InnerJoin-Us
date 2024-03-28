@@ -16,7 +16,9 @@
         </div>
         <div class="group-3">
           <div class="overlap"><img class="bi-github" src="@/assets/img/MainPage/MainPageLogin/bi-github.png" /></div>
-          <div class="cib-google-wrapper"><img class="cib-google" src="@/assets/img/MainPage/MainPageLogin/cib-google.png" /></div>
+          <div class="cib-google-wrapper" @click="googleLogin">
+            <img class="cib-google" src="@/assets/img/MainPage/MainPageLogin/cib-google.png" />
+        </div>
           <div class="ri-kakao-talk-fill-wrapper">
             <img class="ri-kakao-talk-fill" src="@/assets/img/MainPage/MainPageLogin/ri-kakao-talk-fill.png" />
           </div>
@@ -36,7 +38,21 @@
 </template>
 
 <script setup>
+    import { useRouter } from "vue-router";
+    import { onBeforeMount } from 'vue';
+    import axios from 'axios';
 
+    const router = useRouter();
+
+    onBeforeMount(() => {
+        if (document.cookie) {
+            router.replace('/');
+        }
+    });
+
+    function googleLogin() {
+        window.location.href = "http://localhost:8001/oauth2/authorization/google";
+    }
 </script>
 
 <style scoped>

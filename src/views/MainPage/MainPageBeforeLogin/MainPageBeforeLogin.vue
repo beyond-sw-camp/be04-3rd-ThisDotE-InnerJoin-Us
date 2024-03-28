@@ -17,7 +17,8 @@
               </div>
             </div>
             <div class="overlap-wrapper">
-              <div class="overlap-2">
+
+              <div v-if="isBeforeLogin" class="overlap-2">
                 <div class="overlap-group-wrapper">
                   <div class="overlap-group-3">
                     <div @click="navigateToLoginView" class="text-wrapper-5">Log In</div>
@@ -26,6 +27,12 @@
                 <div class="rectangle"></div>
                 <div class="text-wrapper-6">Sign Up</div>
               </div>
+
+              <div v-else>
+                <div class="ellipse"></div>
+                <img class="vector" src="@/assets/img/MainPage/MainPageBeforeLogin/vector-1.png" />
+              </div>
+
             </div>
           </div>
         </div>
@@ -162,16 +169,25 @@
 </template>
 
 <script setup>
-  import { useRoute, useRouter } from "vue-router";
+  import { useRouter } from "vue-router";
+  import { onBeforeMount, ref } from 'vue';
 
   const router = useRouter();
+
+  const isBeforeLogin = ref('');
+
+  onBeforeMount(() => {
+    console.log("onBeforeMount");
+
+    isBeforeLogin.value = !document.cookie;
+  });
 
   function navigateToLoginView() {
     router.push('/login');
   }
 </script>
 
-<style scoped>
+<style>
   @import "@/assets/css/MainPage/MainPageBeforeLogin/globals.css";
   @import "@/assets/css/MainPage/MainPageBeforeLogin/style.css";
 </style>
