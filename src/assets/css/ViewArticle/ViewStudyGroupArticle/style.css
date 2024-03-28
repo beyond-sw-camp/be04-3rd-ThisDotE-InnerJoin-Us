@@ -10,7 +10,7 @@
   background-color: #ffffff;
   width: 1440px;
   height: 1024px;
-  position: relative;
+
 }
 
 .screen .group {
@@ -22,6 +22,7 @@
 }
 
 .screen .overlap-group {
+  left:74px;
   position: relative;
   width: 547px;
   height: 49px;
@@ -58,7 +59,7 @@
 
 .screen .text-wrapper-2 {
   top: 15px;
-  left: 15px;
+  left: 92px;
   color: #000000;
   font-size: 22px;
   position: absolute;
@@ -73,7 +74,7 @@
   width: 548px;
   height: 232px;
   top: 0;
-  left: 0;
+  left: 73px;
   background-color: #d9d9d945;
   border-radius: 20px;
 }
@@ -83,7 +84,7 @@
   width: 549px;
   height: 44px;
   top: 523px;
-  left: 416px;
+  left: 490px;
 }
 
 .screen .group-3 {
@@ -182,7 +183,8 @@
 .screen .text-wrapper-6 {
   position: absolute;
   top: 0;
-  left: 450px;
+  /* left: 450px; */
+  left: 280px;
   font-family: "Inter", Helvetica;
   font-weight: 600;
   color: #0000003b;
@@ -197,7 +199,7 @@
   width: 114px;
   height: 19px;
   top: 253px;
-  left: 849px;
+  left: 920px;
 }
 
 .screen .text-wrapper-7 {
@@ -330,12 +332,34 @@
   left: 11px;
 }
 
+.screen .group-99 {
+  display: flex;
+  flex-direction: column;
+  width: 555px;
+  height: 500px;
+  margin-top: 670px;
+  margin-left: 445px;
+}
+
 .screen .group-7 {
+  display: inline;
   position: absolute;
   width: 545px;
   height: 91px;
   top: 583px;
-  left: 417px;
+  left: 490px;
+}
+
+.screen .group-8 {
+  display: inline;
+  position: relative;
+  width: 553px;
+  height: 51px;
+}
+
+.screen .reply-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .screen .div-wrapper {
@@ -394,14 +418,6 @@
   height: 24px;
   top: 52px;
   left: 506px;
-}
-
-.screen .group-8 {
-  position: absolute;
-  width: 553px;
-  height: 51px;
-  top: 686px;
-  left: 417px;
 }
 
 .screen .image-3 {
@@ -485,11 +501,9 @@
 }
 
 .screen .group-9 {
-  position: absolute;
+  position: relative;
   width: 553px;
   height: 51px;
-  top: 938px;
-  left: 417px;
 }
 
 .screen .group-10 {
@@ -521,7 +535,7 @@
   width: 530px;
   height: 30px;
   top: 152px;
-  left: 419px;
+  left: 500px;
 }
 
 .screen .text-wrapper-14 {
