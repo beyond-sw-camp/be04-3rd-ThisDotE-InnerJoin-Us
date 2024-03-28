@@ -1,21 +1,21 @@
+<br><br><br>
+
 <h1 align="center">
   ✨ This.e 2조 ✨
 </h1>
 
 <h2>
   
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1000&color=0072F7&background=FFFFFF00&random=false&width=435&lines=This+is+InnerJoinUs+Community)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1500&color=0072F7&background=FFFFFF00&random=false&width=1000&lines=Welcome!+This+is+InnerJoinUs+Community!)](https://git.io/typing-svg)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1000&color=F78D00&background=FFFFFF00&random=false&width=435&lines=Front+Project)](https://git.io/typing-svg)
-
-</h2>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1500&color=F78D00&background=FFFFFF00&random=false&width=435&lines=And+This+is+our+Front+Project)](https://git.io/typing-svg)
 
 <div align="center">
   
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbeyond-sw-camp%2Fbe04-3rd-ThisDotE-InnerJoin-Us.git&count_bg=%23FF9400&title_bg=%230076FF&icon=keybase.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbeyond-sw-camp%2Fbe04-3rd-ThisDotE-InnerJoin-Us.git&count_bg=%23FF9400&title_bg=%230076FF&icon=keybase.svg&icon_color=%23FFFFFF&title=TotalView&edge_flat=false)](https://hits.seeyoufarm.com)
 
 <div align=center>
-<img src="https://github.com/beyond-sw-camp/be04-3rd-ThisDotE-InnerJoin-Us/assets/149561287/cdae846d-d161-44b3-b968-60052aa5098f">
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/3feb21d1-5fa7-47ad-bc84-a525517286c8">
 </div>
 
 </div>
@@ -42,6 +42,11 @@
 <img src="https://github.com/ThisDotE/communityForDevelopers/assets/101622086/fb7f77e5-8922-41dd-9b81-247e7efddde5">
 
 </h3>
+<br><br><br>
+<div align=center>
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/149561287/7e153380-e7cb-49b9-9e3f-a725f675c2d7">
+</div>
+<br><br>
 
 <br/>
 
