@@ -299,6 +299,7 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .div-wrapper .line-2 {
@@ -353,6 +354,8 @@
   height: 53px;
   top: 607px;
   left: 878px;
+  display: flex;
+  flex-direction: column;
 }
 
 .div-wrapper .overlap-5 {
@@ -364,11 +367,11 @@
 }
 
 .div-wrapper .group-8 {
-  position: absolute;
+  /* position: absolute;
   width: 45px;
   height: 18px;
   top: 20px;
-  left: 380px;
+  left: 380px; */
 }
 
 .div-wrapper .group-9 {
