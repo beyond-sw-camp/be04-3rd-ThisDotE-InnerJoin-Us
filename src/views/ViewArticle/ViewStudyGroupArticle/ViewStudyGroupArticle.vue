@@ -77,7 +77,7 @@
         </div>
 
         <div class="group-13">
-          <div v-if="article.userList != null" class="text-wrapper-14">{{ article.userList.userId }}</div>
+          <div @click="routerToProfile(article.userCode)" v-if="article.userList != null" class="text-wrapper-14">{{ article.userList.userId }}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
         </div>
       </div>

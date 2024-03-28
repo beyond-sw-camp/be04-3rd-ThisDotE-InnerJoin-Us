@@ -84,7 +84,7 @@
         <div class="group-11">
           <div class="overlap-3">
             <div class="overlap-4">
-              <img class="innerjoin-us" src="../../../assets/img/WriteArticle/WriteStudyGroupArticle/innerjoin-us.png" />
+              <img @click="routerMain()" class="innerjoin-us" src="../../../assets/img/WriteArticle/WriteStudyGroupArticle/innerjoin-us.png" />
               <img class="image" src="../../../assets/img/WriteArticle/WriteStudyGroupArticle/image.png"/>
             </div>
             <div class="vector-wrapper">
@@ -112,9 +112,9 @@ import { useRoute, useRouter } from 'vue-router';
 const router = useRouter();
 
 
-const routerMain = () => {
-        router.push('/');
-      };
+// const routerMain = () => {
+//         router.push('/');
+//       };
 
 
 export default {
@@ -160,8 +160,16 @@ export default {
       studygroupMemberMaxCount,
       submitForm
     };
+
+    function routerMain() {
+        router.push('/');
+    };
   },
 }
+
+// function routerMain(){
+//   router.push('/');
+// }
 
 // export default {
 //   data() {
@@ -203,9 +211,7 @@ export default {
 
 
 
-// function routerMain(){
-//   router.push('/');
-// }
+
 
 </script>
 
