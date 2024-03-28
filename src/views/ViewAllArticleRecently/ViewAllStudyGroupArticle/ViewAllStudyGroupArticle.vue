@@ -48,7 +48,7 @@
 							</div>
 							<div class="text-wrapper-9">모집정원</div>
 							<div class="element">{{ item?.studygroupCurrentMemberCount }}&nbsp;&nbsp;/&nbsp;&nbsp;{{ item?.studygroupMemberMaxCount }}</div>
-							<p class="springboot">
+							<p @click="routerViewArticle(item?.articleId)" class="springboot">
 								{{ item?.articleContent }}
 							</p>
 							<div class="text-wrapper-10">{{item?.studygroupRecruitmentDeadline}}</div>
