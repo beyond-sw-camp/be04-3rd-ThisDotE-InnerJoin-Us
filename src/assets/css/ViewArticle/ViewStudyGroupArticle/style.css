@@ -344,11 +344,11 @@
 }
 
 .screen .group-7 {
+  display: inline;
   position: relative;
-  width: 545px;
+  width: 553px;
   height: 91px;
-  top: 583px;
-  left: 490px;
+
 }
 
 .screen .group-8 {
@@ -415,7 +415,7 @@
 
 .screen .mingcute-send-plane {
   position: absolute;
-  width: 24px;
+  width: 40px;
   height: 24px;
   top: 52px;
   left: 506px;

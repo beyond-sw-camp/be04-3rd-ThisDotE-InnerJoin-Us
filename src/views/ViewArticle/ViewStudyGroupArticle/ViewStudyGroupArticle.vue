@@ -49,48 +49,19 @@
             </div>
           </div>
         </div>
-        <div class="group-7">
-            <div class="div-wrapper">
-              <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
-            </div>
-            <img class="image-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/img/2.png" />
-            <div class="rectangle-3">
-              <input type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
-            </div>
-            <button type="button">
-              <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png" onclick="alert('클릭!')"/>
-            </button>
-          </div>
         <div class="group-99">
-          <!-- <div class="group-8">
+          <div class="group-7">
+              <div class="overlap-group-3"><div class="text-wrapper-10">댓글</div></div>
+              <input class="rectangle-3" type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
+            <button class="mingcute-send-plane" type="button">클릭</button>
+          </div>
+          <div class="group-8">
               <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
               <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
               <div v-if="article.replyDTOList" class="text-wrapper-12">{{article.replyDTOList[0].replyCreateDate}}</div>
               <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0].replyContent}}</p>
               <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
               <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0].replyLikeCount}}</div>
-              <div class="ph-siren-light">
-                <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
-              </div>
-          </div> -->
-          <div class="group-8">
-              <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-              <div class="text-wrapper-11">userId</div>
-              <div class="text-wrapper-12">날짜</div>
-              <p class="p">내용</p>
-              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-              <div class="text-wrapper-13">66</div>
-              <div class="ph-siren-light">
-                <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
-              </div>
-          </div>
-          <div class="group-9">
-              <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-              <div class="text-wrapper-11">userId</div>
-              <div class="text-wrapper-12">날짜</div>
-              <p class="p">내용</p>
-              <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-              <div class="text-wrapper-13">66</div>
               <div class="ph-siren-light">
                 <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
               </div>
