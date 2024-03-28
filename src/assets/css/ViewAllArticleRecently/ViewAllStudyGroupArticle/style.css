@@ -77,7 +77,7 @@
 }
 
 .div-wrapper .group-2 {
-  position: absolute;
+  position: relative;
   width: 686px;
   height: 37px;
   top: 198px;
@@ -266,11 +266,12 @@
 }
 
 .div-wrapper .group-5 {
-  position: absolute;
+  position: relative;
   width: 706px;
   height: 108px;
-  top: 249px;
-  left: 365px;
+  top: 50px;
+  /* left: 365px; */
+  flex-direction: column;
 }
 
 .div-wrapper .image-3 {
