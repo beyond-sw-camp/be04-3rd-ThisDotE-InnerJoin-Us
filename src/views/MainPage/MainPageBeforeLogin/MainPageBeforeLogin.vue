@@ -36,7 +36,7 @@
 
                 <div>
                   <ul style="width: 179px;" class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">내 프로필</a></li>
+                    <li><a class="dropdown-item" @click="navigateToUserProfile(userCode)" >내 프로필</a></li>
                     <li><a class="dropdown-item" href="#">설정</a></li>
                     <li><a class="dropdown-item" href="#">로그아웃</a></li>
                   </ul>
@@ -144,7 +144,7 @@
           <div class="text-wrapper-14">{{ shareInfoList[0].userList.userId }}</div>
         </div>
         <div v-if="shareInfoList.length" class="group-20">                                 <!-- 정보공유 2번 -->
-          <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />     
+          <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
           <div class="text-wrapper-12">{{ shareInfoList[1].articleTitle }}</div>
           <div class="text-wrapper-13">{{ shareInfoList[1].articleCreateDate }}</div>
           <div class="text-wrapper-14">{{ shareInfoList[1].userList.userId }}</div>
@@ -186,11 +186,24 @@
   const router = useRouter();
 
   const isBeforeLogin = ref('');
+  const userCode = ref('');
 
-  onBeforeMount(() => {
-    console.log("onBeforeMount");
+  onBeforeMount(async () => {
+    let loginResponse = document.cookie;
 
-    isBeforeLogin.value = !document.cookie;
+    isBeforeLogin.value = !loginResponse;
+
+    if (loginResponse) {
+      let loginCode = loginResponse.split('; ')[1].split('=')[1];
+
+      await axios.get(`http://localhost:8000/user/login-code/${loginCode}`)
+      .then(function (response) {
+        userCode.value = response.data.userCode;
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    }
   });
 
   const studyValue = ref([]);
@@ -216,7 +229,7 @@
       }
 
     } catch (error){
-      console.error("Error: ", error);
+      console.log("Error: ", error);
     }
   })
 
@@ -234,6 +247,10 @@
 
   function navigateToLoginView() {
     router.push('/login');
+  }
+
+  function navigateToUserProfile(userCode) {
+    router.push(`/viewUserProfile/${userCode}`);
   }
 </script>
 
