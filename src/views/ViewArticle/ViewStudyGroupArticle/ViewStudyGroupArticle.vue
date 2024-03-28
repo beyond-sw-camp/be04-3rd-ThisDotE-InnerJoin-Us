@@ -34,7 +34,7 @@
         </div>
         <div class="overlap-group-wrapper">
           <div class="overlap-2">
-            <div class="overlap-3">
+            <div @click="routerMain()" class="overlap-3">
               <img class="innerjoin-us" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/innerjoin-us.png" />
               <img class="img" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/1.png" />
             </div>
@@ -130,6 +130,7 @@
     
   ]);
   const route = useRoute();
+  const router = useRouter();
 
   onMounted(async() => {
     try{
@@ -142,6 +143,9 @@
     }
   })
 
+  function routerMain (){
+    router.push(`/`)
+  }
 
 
 </script>

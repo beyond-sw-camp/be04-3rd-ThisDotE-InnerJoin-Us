@@ -60,7 +60,7 @@
 							href="../../MainPage/MainPageLogin/index.html"
 							target="_self"
 						></a>
-						<img class="innerjoin-us" src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/innerjoin-us.png" /><img
+						<img @click="routerMain()" class="innerjoin-us" src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/innerjoin-us.png" /><img
 							class="image-2"
 							src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/1.png"
 						/>
@@ -255,6 +255,15 @@
 </template>
 
 <script setup>
+	import axios from 'axios';
+	import {ref, onMounted} from 'vue';
+	import { useRouter } from 'vue-router';
+
+	const router = useRouter();
+
+	function routerMain(){
+		router.push('/');
+	}
 </script>
 
 <style scoped>

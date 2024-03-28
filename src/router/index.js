@@ -23,7 +23,7 @@ const router = createRouter({
             component: WriteStudyGroupArticle
         },
         {
-            path: '/viewStudyGroupArticle',
+            path: '/viewStudyGroupArticle/:id',
             component: ViewStudyGroupArticle
         },
         {
@@ -46,6 +46,7 @@ const router = createRouter({
             path: '/viewotheruserprofile',
             component: ViewOtherUserProfile
         },
+        {
             path: '/viewallhotstudygrouparticle',
             component: ViewAllHotStudyGroupArticle
         },

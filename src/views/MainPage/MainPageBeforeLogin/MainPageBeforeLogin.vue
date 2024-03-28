@@ -7,7 +7,7 @@
             <div class="overlap-group">
               <img class="innerjoin-us" src="@/assets/img/MainPage/MainPageBeforeLogin/innerjoin-us.png" /> <img class="image" src="@/assets/img/MainPage/MainPageBeforeLogin/image.png" />
             </div>
-            <div class="text-wrapper">스터디구인</div>
+            <div @click="changeRouterToViewAllStudyGroupArticle()" class="text-wrapper">스터디구인</div>
             <div class="text-wrapper-2">정보 공유</div>
             <div class="text-wrapper-3">질문</div>
             <div class="view">
@@ -37,7 +37,7 @@
             <div class="text-wrapper-8">스터디 구인</div>
             <div class="group-4">
               <div class="overlap-group-4">
-                <div class="text-wrapper-9">더보기</div>
+                <div @click="changeRouterToViewAllStudyGroupArticle()" class="text-wrapper-9">더보기</div>
                 <img class="line-2" src="@/assets/img/MainPage/MainPageBeforeLogin/line-5.png" />
               </div>
             </div>
@@ -200,6 +200,10 @@
 
   function changeRouterToProfile(routerName) {
     router.push(`/viewuserprofile/${routerName}`)
+  }
+
+  function changeRouterToViewAllStudyGroupArticle() {
+    router.push('/viewallstudygrouparticle')
   }
 
 </script>
