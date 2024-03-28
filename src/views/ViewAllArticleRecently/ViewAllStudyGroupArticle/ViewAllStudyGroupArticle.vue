@@ -28,11 +28,10 @@
 				<img class="image" src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/image.png" />
 				<div class="group-3">
 					<div class="overlap-group-2">
-						<div class="text-wrapper-4">
+						<div @click="routeWriteArticle()" class="text-wrapper-4">
 							<a
 								target="_self"
 								style="color: gray"
-								href="../../WriteArticle/WriteStudyGroupArticle/index.html"
 								>작성하기</a
 							>
 						</div>
@@ -263,6 +262,10 @@
 
 	function routerMain(){
 		router.push('/');
+	}
+
+	function routeWriteArticle() {
+		router.push('/writeStudyGroupArticle')
 	}
 </script>
 

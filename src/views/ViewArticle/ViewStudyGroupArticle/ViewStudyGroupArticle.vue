@@ -62,11 +62,11 @@
 
           <div class="group-8">
             <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-            <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
+            <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0]?.responseUser.userId}}</div>
             <div class="text-wrapper-12">2022.02.23</div>
-            <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0].replyContent}}</p>
+            <p v-if="article.replyDTOList" class="p">{{article.replyDTOList[0]?.replyContent}}</p>
             <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-            <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0].replyLikeCount}}</div>
+            <div v-if="article.replyDTOList" class="text-wrapper-13">{{article.replyDTOList[0]?.replyLikeCount}}</div>
             <div class="ph-siren-light">
               <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
             </div>

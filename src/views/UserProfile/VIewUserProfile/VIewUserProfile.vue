@@ -191,22 +191,17 @@
   const route = useRoute();
   
 
-  const get = (error) => {
-    axios({
-      url: `http://localhost:8000/user/${route.params.id}`
-    }).then((response) => {
-      if(response.status == 200) {
-        profile.value = {info: response.data};
-        console.log('response.data: ', response.data);
-        console.log('profile: ', profile);
-        console.log('profile.info: ', profile.info);
-      }
-    }).catch((error) => {
-      console.log('Error: 데이터 못가져옴', error);
-    });
-  }
-  onBeforeMount(() => {
-    get();
+  onMounted(async() => {
+    try {
+      const response = await axios.get(`http://localhost:8000/user/${route.params.id}`);
+      profile.value = response.data;
+      articles.value = response.data.articleList;
+      console.log(profile.value);
+      console.log(articles.value);
+
+    } catch (error) {
+      console.error("Error: ", error);
+    }
   })
 
 
@@ -218,18 +213,6 @@
   //     const response = await axios.get(`http://localhost:8000/user/${route.params.id}`);
   //     userValue.value = response.data;
       
-      console.log(value);
-      console.log(article);
-
-      for(let i = 0; i < value.value.length; i++){
-        article.value.push(value.articleList[i])
-      }
-      console.log(article.value);
-
-    } catch (error) {
-      console.error("Error: " + error);
-    }
-  })
 
 </script>
 

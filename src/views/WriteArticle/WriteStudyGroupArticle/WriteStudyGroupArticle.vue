@@ -1,6 +1,7 @@
 <template>
   <body>
     <div class="screen">
+      <form v-on:submit.prevent="submitForm">
       <div class="div">
         <div class="group">
           <div class="rectangle">
@@ -68,7 +69,9 @@
           <div class="group-9">
             <div class="overlap-group-2">
               <div class="rectangle-4"></div>
-              <a href="WriteStudyGroupArticle" @click="writeSAT" class="text-wrapper-10">등록</a>
+              <a href="WriteStudyGroupArticle" @click="writeSAT" class="text-wrapper-10">
+                <button type="submit">등록</button> 
+              </a>
             </div>
           </div>
           <div class="group-10">
@@ -96,105 +99,66 @@
           </div>
         </div>
       </div>
+    </form>
     </div>
   </body>
 </template>
 
 <script>
-  // export default {
-  //   data() {
-  //     return {
-  //       articleTitle: '',
-  //       articleContent: '',
-  //       articleCategory: 3,
-  //       articleViewCount: 0,
-  //       articleLikeCount: 0,
-  //       articleReplyCount: 0,
-  //       articleReportStatus: 0,
-  //       studygroupMemberMaxCount: '',
-  //       articleQuestionCategory: 0,
-  //       user_code: 5,
-  //       studygroupId: 12,
-  //       studygroupCurrentMemberCount: 0,
-  //       studygroupPendingMemberCount: 0,
-  //       articleDeleteStatus: 0,
-  //       form:''
-  //     }
-  //   },
-  //   methods: {
-  //     gobackList() {
-  //       this.$router.push({path:'/writeStudyGroupArticle', query:this.body});
-  //     },
-  //     writeSAT() {
-  //       if(!this.articleTitle) {
-  //         alert("제목을 입력하세요.");
-  //         this.$refs.title.focus();
-  //         return false;
-  //       }
-  //       if(!this.articleContent) {
-  //         alert("내용을 입력하세요.");
-  //         this.$refs.content.focus();
-  //         return false;
-  //       }
-  //       if(!this.studygroupMemberMaxCount) {
-  //         alert("정원수를 입력하세요.");
-  //         this.$refs.memberCount.focus();
-  //         return false;
-  //       }
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
-  //       this.form = {
-  //         title: this.title,
-  //         content: this.content,
-  //         category: this.articleCategory,
-  //         viewCount: this.articleViewCount,
-  //         likeCount: this.articleLikeCount,
-  //         replyCount: this.articleReplyCount,
-  //         reportStatus: this.articleReportStatus,
-  //         memberCount: this.memberCount,
-  //         questionCategory: this.articleQuestionCategory,
-  //         user_code: this.user_code,
-  //         studygroupId: this.studygroupId,
-  //         studygroupCurrentMemberCount: this.studygroupCurrentMemberCount,
-  //         studygroupPendingMemberCount: this.studygroupPendingMemberCount,
-  //         articleDeleteStatus: this.articleDeleteStatus
-  //       }
-
-  //       axios.post('http://localhost:8000/article-reply/article', this.form)
-  //       .then((res) => {
-  //         if(res.data.success) {
-  //           alert('게시글이 등록되었습니다.');
-  //           this.writeSAT();
-  //         } else {
-  //           alert('게시글 등록에 실패했습니다. 다시 시도해주세요.');
-  //         }
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       })
-  //     }
-  //   }
-  // }
-
-  import axios from 'axios';
-  import {ref, onMounted} from 'vue';
-  import {useRoute, useRouter} from 'vue-router';
-
-  const article = ref([
-
-  ]);
-  const route = useRoute();
-
-  onMounted(async() => {
-    try{
-      const reponse = await axios.post(`http://localhost:8000/article-reply/article/${route.params.id}`);
-      reply.value = response.data;
-      console.log(reply.value);
+export default {
+  data() {
+    return {
+      articleTitle: '',
+      articleContent: '',
+      studygroupMemberMaxCount: '',
+      // Include additional data properties as necessary
     }
-    catch(errpr) {
-      console.log("Error: " + error);
-    }
-  })
+  },
+  methods: {
+    submitForm() {
+      // Assuming you want to capture the user code from route parameters
+      const route = useRoute();
+      // const user_code = route.params.id; // Adjust according to your actual route parameter
 
+      const data = {
+        articleTitle: this.articleTitle,
+        articleContent: this.articleContent,
+        studygroupMemberMaxCount: this.studygroupMemberMaxCount,
+        // Set other required properties
+        articleCategory: 3,
+        articleViewCount: 2,
+        articleLikeCount: 5,
+        articleReplyCount: 6,
+        articleReportStatus: 3,
+        articleQuestionCategory: 34,
+        userCode: 6,
+        studygroupId: 12,
+        studygroupCurrentMemberCount: 1,
+        studygroupPendingMemberCount: 2,
+        articleDeleteStatus: 0
+      }
+
+      const url = `http://localhost:8000/article-reply/article`;
+
+      axios.post(url, data)
+      .then(function(response){
+        console.log(response);
+        // Handle success response, maybe redirect or show a success message
+      })
+      .catch(function(error){
+        console.log(error);
+        // Handle error, show error message to the user
+      });
+    }
+  },
+  mounted() {
+    // If you need to perform actions when the component is mounted, add here
+  },
+}
 </script>
 
 <style scoped>
