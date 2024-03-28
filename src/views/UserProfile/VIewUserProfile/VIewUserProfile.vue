@@ -182,6 +182,34 @@
 </template>
 
 <script setup>
+  // import axios from 'axios';
+  // import { ref, onBeforeMount, onMounted } from 'vue';
+  // import { useRoute, useRouter } from 'vue-router';
+
+  // const profile = ref({
+  //   info: {}
+  // });
+  // const route = useRoute();
+  
+
+  // const get = (error) => {
+  //   axios({
+  //     url: `http://localhost:8000/user/${route.params.id}`
+  //   }).then((response) => {
+  //     if(response.status == 200) {
+  //       profile.value = {info: response.data};
+  //       console.log('response.data: ', response.data);
+  //       console.log('profile: ', profile);
+  //       console.log('profile.info: ', profile.info);
+  //     }
+  //   }).catch((error) => {
+  //     console.log('Error: 데이터 못가져옴', error);
+  //   });
+  // }
+  // onBeforeMount(() => {
+  //   get();
+  // })
+
 
   import axios from 'axios';
   import { ref, onMounted } from 'vue';
