@@ -26,12 +26,12 @@
       <div class="group-5">
         <div class="overlap-3"><div class="text-wrapper-7">git</div></div>
       </div>
-      <div class="group-6">
+      <div  class="group-6">
         <img class="image" src="../../../../src/assets/img/UserProfile/ViewUserProfile/3.png" />
         <img class="mdi-like" src="../../../../src/assets/img/UserProfile/ViewUserProfile/mdi-like-3.png" />
         <img class="carbon-view" src="../../../../src/assets/img/UserProfile/ViewUserProfile/carbon-view-3.png" />
         <img class="img" src="../../../../src/assets/img/UserProfile/ViewUserProfile/vector-4.png" />
-        <div class="text-wrapper-8">490</div>
+        <div v-if="article.value != null" class="text-wrapper-8">{{ article[0].articleViewCount }}</div>
         <div class="text-wrapper-9">15</div>
         <div class="text-wrapper-10">NullPointerException 피하기</div>
         <div class="text-wrapper-11">💡 클린 코드 사용해보세요~</div>
@@ -187,6 +187,7 @@
   import { useRoute } from 'vue-router';
 
   const value = ref([]);
+  const article = ref([]);
   const route = useRoute();
 
   onMounted(async () => {
@@ -195,6 +196,12 @@
       value.value = response.data;
       
       console.log(value);
+      console.log(article);
+
+      for(let i = 0; i < value.value.length; i++){
+        article.value.push(value.articleList[i])
+      }
+      console.log(article.value);
 
     } catch (error) {
       console.error("Error: " + error);
