@@ -3,11 +3,11 @@
     <div class="screen">
       <div class="div">
         <div class="group">
-          <div class="overlap-group"><div v-show="article != null" class="text-wrapper">{{ article.articleTitle }}</div></div>
+          <div class="overlap-group"><div v-show="article != null" class="text-wrapper">{{ article?.articleTitle }}</div></div>
         </div>
         <div class="overlap-wrapper">
           <div class="overlap">
-            <div v-if="article != null" class="text-wrapper-2">{{ article.articleContent }}</div>
+            <div v-if="article != null" class="text-wrapper-2">{{ article?.articleContent }}</div>
             <div class="rectangle"></div>
           </div>
         </div>
