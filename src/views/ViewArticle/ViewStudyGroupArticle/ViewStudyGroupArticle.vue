@@ -3,18 +3,18 @@
     <div class="screen">
       <div class="div">
         <div class="group">
-          <div class="overlap-group"><div v-show="article != null" class="text-wrapper">{{ article.articleTitle }}</div></div>
+          <div class="overlap-group"><div v-show="article != null" class="text-wrapper">{{ article?.articleTitle }}</div></div>
         </div>
         <div class="overlap-wrapper">
           <div class="overlap">
-            <div v-if="article != null" class="text-wrapper-2">{{ article.articleContent }}</div>
+            <div v-if="article != null" class="text-wrapper-2">{{ article?.articleContent }}</div>
             <div class="rectangle"></div>
           </div>
         </div>
         <div class="group-2">
           <div class="group-3">
             <img class="carbon-view" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/carbon-view.png" />
-            <div class="text-wrapper-3">490</div>
+            <div class="text-wrapper-3">{{ article?.articleViewCount }}</div>
           </div>
           <div class="group-4">
             <img class="vector" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector.png" />
@@ -59,61 +59,61 @@
           </div>
           <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"/>
         </div>
-        <div class="group-8">
+        <div v-if="article?.replyDTOList" class="group-8">
           <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div v-if="article.replyDTOList" class="text-wrapper-11">{{article.replyDTOList[0].responseUser.userId}}</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div class="text-wrapper-11">{{ article?.replyDTOList[0]?.responseUser?.userId }}</div>
+          <div class="text-wrapper-12">{{ article?.replyDTOList[0]?.replyCreatedDate }}</div>
+          <p class="p">{{ article?.replyDTOList[0]?.replyContent }}</p>
           <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
+          <div class="text-wrapper-13">{{ article?.replyDTOList[0]?.replyLikeCount }}</div>
           <div class="ph-siren-light">
             <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
           </div>
         </div>
-        <div class="group-9">
+        <div v-if="article?.replyDTOList" class="group-9">
           <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div  class="text-wrapper-11">{{ article?.replyDTOList[4]?.responseUser?.userId }}</div>
+          <div class="text-wrapper-12">{{ article?.replyDTOList[4]?.replyCreatedDate }}</div>
+          <p  class="p">{{article?.replyDTOList[4]?.replyContent}}</p>
           <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
+          <div class="text-wrapper-13">{{ article?.replyDTOList[4]?.replyLikeCount }}</div>
           <div class="ph-siren-light">
             <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
           </div>
         </div>
-        <div class="group-10">
+        <div v-if="article?.replyDTOList" class="group-10">
           <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div class="text-wrapper-11">{{ article?.replyDTOList[3]?.responseUser?.userId }}</div>
+          <div class="text-wrapper-12">{{ article?.replyDTOList[3]?.replyCreatedDate }}</div>
+          <p class="p">{{article?.replyDTOList[3]?.replyContent}}</p>
           <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
+          <div class="text-wrapper-13">{{ article?.replyDTOList[3]?.replyLikeCount }}</div>
           <div class="ph-siren-light">
             <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" />
           </div>
         </div>
-        <div class="group-11">
+        <div v-if="article?.replyDTOList" class="group-11">
           <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div class="text-wrapper-11">{{ article?.replyDTOList[2]?.responseUser?.userId }}</div>
+          <div class="text-wrapper-12">{{ article?.replyDTOList[2]?.replyCreatedDate }}</div>
+          <p class="p">{{article?.replyDTOList[2]?.replyContent}}</p>
           <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
+          <div class="text-wrapper-13">{{ article?.replyDTOList[2]?.replyLikeCount }}</div>
           <div class="ph-siren-light">
             <img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png"/>
           </div>
         </div>
-        <div class="group-12">
+        <div v-if="article?.replyDTOList" class="group-12">
           <img class="image-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/7.png" />
-          <div class="text-wrapper-11">댓글 작성자</div>
-          <div class="text-wrapper-12">2022.02.23</div>
-          <p class="p">어쩔 TV 저쩔 TV 어쩔 냉장고~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+          <div class="text-wrapper-11">{{ article?.replyDTOList[1]?.responseUser?.userId }}</div>
+          <div class="text-wrapper-12">{{ article?.replyDTOList[1]?.replyCreatedDate }}</div>
+          <p class="p">{{article?.replyDTOList[1]?.replyContent}}</p>
           <img class="mdi-like-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mdi-like-5.png" />
-          <div class="text-wrapper-13">90</div>
+          <div class="text-wrapper-13">{{ article?.replyDTOList[1]?.replyLikeCount }}</div>
           <div class="ph-siren-light"><img class="vector-3" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/vector-6.png" /></div>
         </div>
-        <div class="group-13">
-          <div v-if="article.userList != null" class="text-wrapper-14">{{article.userList.userId}}</div>
+        <div v-if="article?.replyDTOList" class="group-13">
+          <div v-if="article?.userList != null" class="text-wrapper-14">{{ article?.userList?.userId }}</div>
           <img class="ph-siren-light-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/ph-siren-light.png" />
         </div>
       </div>
