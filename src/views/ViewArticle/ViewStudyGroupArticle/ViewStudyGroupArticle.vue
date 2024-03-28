@@ -55,9 +55,10 @@
           </div>
           <img class="image-2" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/img/2.png" />
           <div class="rectangle-3">
-            <input type="text" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
+            <input type="text" v-model="replyContent" placeholder="댓글 작성" style="border: 0px; border-radius: 5px; background-color: #d9d9d94f; width: 490px; height: 20px;">
           </div>
-          <img class="mingcute-send-plane" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png"/>
+          <img class="mingcute-send-plane" @click="submitForm" src="../../../assets/img/ViewArticle/ViewStudyGroupArticle/mingcute-send-plane-fill.png">
+        </img>
         </div>
 
           <div class="group-8">
@@ -91,11 +92,14 @@
   const route = useRoute();
   const router = useRouter();
 
+  const replyContent = ref('');
+
   onMounted(async() => {
     try{
       const response = await axios.get(`http://localhost:8000/article-reply/article/${route.params.id}`);
       article.value = response.data;
       console.log(article.value);
+      console.log(article.value.articleId);
     }
     catch(error) {
       console.error("Error: ", error);
@@ -106,6 +110,28 @@
     router.push(`/`)
   }
 
+  const submitForm = async () => {
+  // 라우트 파라미터에서 articleId 추출
+
+  const data = {
+    replyContent: replyContent.value,
+    articleId: article.value.articleId,
+    userCode: '13'
+  }
+
+  const url = `http://localhost:8000/article-reply/reply`
+
+  // axios.post를 사용하여 비동기 요청 전송
+  // 응답 처리를 위한 로직을 추가해야 함
+  try {
+    const response = await axios.post(url, data)
+    console.log(response) // 개발자가 확인할 수 있도록 콘솔에 로그 출력
+    router.go(0)
+
+  } catch (error) {
+    console.error(error) // 오류 처리
+  }
+}
 
 </script>
 
