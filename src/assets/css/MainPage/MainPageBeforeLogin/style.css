@@ -689,4 +689,7 @@
   top: 11px;
   right: 12px;
 }
+
+.dropdown {
+  height: 40px;
 }

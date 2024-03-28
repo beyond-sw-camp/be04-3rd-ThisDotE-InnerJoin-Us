@@ -28,9 +28,19 @@
                 <div class="text-wrapper-6">Sign Up</div>
               </div>
 
-              <div v-else>
-                <div class="ellipse"></div>
-                <img class="vector" src="@/assets/img/MainPage/MainPageBeforeLogin/vector-1.png" />
+              <div v-else style="cursor: pointer;">
+                <div class="dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="ellipse"></div>
+                  <img class="vector" src="@/assets/img/MainPage/MainPageBeforeLogin/vector-1.png" />
+                </div>
+
+                <div>
+                  <ul style="width: 179px;" class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">내 프로필</a></li>
+                    <li><a class="dropdown-item" href="#">설정</a></li>
+                    <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                  </ul>
+                </div>
               </div>
 
             </div>
