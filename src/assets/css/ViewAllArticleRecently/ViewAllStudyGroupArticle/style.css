@@ -398,6 +398,7 @@
   font-weight: 600;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .img-wrapper {
