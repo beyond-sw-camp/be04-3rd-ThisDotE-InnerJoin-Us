@@ -1,10 +1,11 @@
 <template>
   <body>
     <div class="screen">
+      <form v-on:submit.prevent="submitForm">
       <div class="div">
         <div class="group">
           <div class="rectangle">
-            <input type="text" placeholder="제목 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 50px;">
+            <input type="text" v-model="articleTitle" placeholder="제목 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 50px;">
           </div>
           <div class="text-wrapper">제목</div>
         </div>
@@ -26,7 +27,7 @@
         <div class="group-4">
           <div class="text-wrapper">내용</div>
           <div class="rectangle-2">
-            <input type="text" placeholder="내용 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 200px;">
+            <input type="text" v-model="articleContent" placeholder="내용 작성" style="border: 0px; border-radius: 10px; color: black; background-color: #d9d9d94f; width: 550px; height: 200px;">
           </div>
         </div>
         <div class="group-5">
@@ -60,7 +61,7 @@
         <div class="group-7">
           <div class="text-wrapper">정원수</div>
           <div class="rectangle-3">
-            <input type="text" style="width: 85px; height: 30px; border-radius: 10px; border: 0px; background-color: #d9d9d94f;">
+            <input v-model="studygroupMemberMaxCount" type="number" style="width: 85px; height: 30px; border-radius: 10px; border: 0px; background-color: #d9d9d94f;">
           </div>
           <div class="text-wrapper-9">명</div>
         </div>
@@ -68,13 +69,15 @@
           <div class="group-9">
             <div class="overlap-group-2">
               <div class="rectangle-4"></div>
-              <div class="text-wrapper-10">등록</div>
+              <a href="WriteStudyGroupArticle" @click="writeSAT" class="text-wrapper-10">
+                <button type="submit">등록</button> 
+              </a>
             </div>
           </div>
           <div class="group-10">
             <div class="overlap-group-2">
               <div class="rectangle-5"></div>
-              <div class="text-wrapper-10">취소</div>
+              <a href="ViewAllStudyGroupArticle" @click="gobackList" class="text-wrapper-10">취소</a>
             </div>
           </div>
         </div>
@@ -96,12 +99,66 @@
           </div>
         </div>
       </div>
+    </form>
     </div>
   </body>
 </template>
 
-<script setup>
+<script>
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
+export default {
+  data() {
+    return {
+      articleTitle: '',
+      articleContent: '',
+      studygroupMemberMaxCount: '',
+      // Include additional data properties as necessary
+    }
+  },
+  methods: {
+    submitForm() {
+      // Assuming you want to capture the user code from route parameters
+      const route = useRoute();
+      // const user_code = route.params.id; // Adjust according to your actual route parameter
+
+      const data = {
+        articleTitle: this.articleTitle,
+        articleContent: this.articleContent,
+        studygroupMemberMaxCount: this.studygroupMemberMaxCount,
+        // Set other required properties
+        articleCategory: 3,
+        articleViewCount: 2,
+        articleLikeCount: 5,
+        articleReplyCount: 6,
+        articleReportStatus: 3,
+        articleQuestionCategory: 34,
+        userCode: 6,
+        studygroupId: 12,
+        studygroupCurrentMemberCount: 1,
+        studygroupPendingMemberCount: 2,
+        articleDeleteStatus: 0
+      }
+
+      const url = `http://localhost:8000/article-reply/article`;
+
+      axios.post(url, data)
+      .then(function(response){
+        console.log(response);
+        // Handle success response, maybe redirect or show a success message
+      })
+      .catch(function(error){
+        console.log(error);
+        // Handle error, show error message to the user
+      });
+    }
+  },
+  mounted() {
+    // If you need to perform actions when the component is mounted, add here
+  },
+}
 </script>
 
 <style scoped>
