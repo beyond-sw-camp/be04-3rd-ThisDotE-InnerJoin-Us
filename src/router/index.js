@@ -39,35 +39,35 @@ const router = createRouter({
             path: '/modifyStudyGroupArticle',
             component: ModifyStudyGroupArticle
         },
-
-        /* Profile */
         {
-            path: '/viewuserprofile/:id',
-            component: ViewUserProfile
-        },
-        {
-            path: '/viewuserallactivationlogreply',
-            component: ViewUserAllActivationLogReply
-        },
-        {
-            path: '/viewuserallactivationlogarticle',
-            component: ViewUserAllActivationLogArticle
-        },
-        {
-            path: '/viewotheruserprofile',
-            component: ViewOtherUserProfile
-        },
-        {
-            path: '/viewallhotstudygrouparticle',
+            path: '/viewAllHotStudyGroupArticle',
             component: ViewAllHotStudyGroupArticle
         },
         {
-            path: '/viewallstudygrouparticle',
+            path: '/viewAllStudyGroupArticle',
             component: ViewAllStudyGroupArticle
         },
         {
-            path: '/viewallstudygrouparticletoggle',
+            path: '/viewAllStudyGroupArticleToggle',
             component: ViewAllStudyGroupArticleToggle
+        },
+
+        /* Profile */
+        {
+            path: '/viewUserProfile/:id',
+            component: ViewUserProfile
+        },
+        {
+            path: '/viewUserAllActivationLogReply',
+            component: ViewUserAllActivationLogReply
+        },
+        {
+            path: '/viewUserAllActivationLogArticle',
+            component: ViewUserAllActivationLogArticle
+        },
+        {
+            path: '/viewOtherUserProfile',
+            component: ViewOtherUserProfile
         }
     ]
 })

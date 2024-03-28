@@ -218,11 +218,11 @@
   }
 
   function changeRouterToProfile(routerName) {
-    router.push(`/viewuserprofile/${routerName}`)
+    router.push(`/viewUserProfile/${routerName}`)
   }
 
   function changeRouterToViewAllStudyGroupArticle() {
-    router.push('/viewallstudygrouparticle')
+    router.push('/viewAllStudyGroupArticle')
   }
 
   const router = useRouter();
