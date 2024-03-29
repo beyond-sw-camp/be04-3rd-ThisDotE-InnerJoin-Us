@@ -2,12 +2,16 @@
 <h1 align="center">
 ✨ This.e 2조 ✨
 </h1>
+<br>
 
-<h2>
-  
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1500&color=0072F7&background=FFFFFF00&random=false&width=1000&lines=Welcome!+This+is+InnerJoinUs+Community!)](https://git.io/typing-svg)
+<div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1500&color=F78D00&background=FFFFFF00&random=false&width=435&lines=And+This+is+our+Front+Project)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1500&color=0072F7&background=FFFFFF00&random=false&center=true&width=1000&lines=Welcome!+This+is+InnerJoinUs+Community!)](https://git.io/typing-svg)
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=&weight=600&size=25&pause=1500&color=F78D00&background=FFFFFF00&random=false&center=true&width=435&lines=And+This+is+our+Front+Project)](https://git.io/typing-svg)
+
+</div>
+
 
 <div align="center">
   
