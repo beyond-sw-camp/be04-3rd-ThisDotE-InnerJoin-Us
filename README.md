@@ -67,11 +67,30 @@
 
 <img src="https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/afc0359c-2472-484c-8275-ca04184df25d" width="800" height="400"/>
 
-<br>
+<br><br><br>
 
 ## 📍 Figma Front 설계
-<br>
+<br><br><br>
 
-<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/339681c4-7347-4543-90ac-2fbda02f5c83"/>
+<h2>Main Page&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUserProfile
+  <br>
+  <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/339681c4-7347-4543-90ac-2fbda02f5c83" width="500" height="500"/><img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/b8430538-aeeb-4c15-ae89-f40aa24cda95" width="500" height="500"/>
+  <br>
+</h2>
+<h2>Inquiry&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspReport
+  <br>
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/758b00ec-a33d-4100-a76b-b50b7dfd7d1f" width="500" height="500"/><img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/fba402e6-bedf-46ec-9328-0418c0849423" width="500" height="500"/>
+  <br>
+</h2>  
+<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspStudyGroup Article
+  <br>
+  <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/62bc493a-95ef-42ef-a124-177264af3c9e"/>
+  <br>
+</h2>
 
-<img src="https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/f9e48391-56a4-4804-b0ce-0127de1219c4" width="500" height="400"/><img src="https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/0a3a1f7c-55eb-4624-b44c-3f789672c20e" width="500" height="400"/>
+<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWhole Windows
+  <br>
+  <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/46e41294-88a3-4aa3-98f4-518a0d173244"/>
+  <br>
+</h2>
+
