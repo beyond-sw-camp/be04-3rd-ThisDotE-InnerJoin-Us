@@ -17,6 +17,7 @@
   
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fbeyond-sw-camp%2Fbe04-3rd-ThisDotE-InnerJoin-Us.git&count_bg=%23FF9400&title_bg=%230076FF&icon=keybase.svg&icon_color=%23FFFFFF&title=TotalView&edge_flat=false)](https://hits.seeyoufarm.com)
 
+</div>
 <br>
 
 <h2 align="center">👾 Members 👾</h2>
@@ -67,12 +68,50 @@
 
 
 ### 📍 스토리 보드(Story Board)
+<br>
 <details>
   <summary>Main Page</summary>
     
-<img src="github.com/ThisDotE/InnerJoinUs/assets/101622086/2cd0090b-73c2-4d33-8a34-0be4fda76673"/>
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/2cd0090b-73c2-4d33-8a34-0be4fda76673"/>
     
 </details>
+
+<details>
+  <summary>Main Page LogIn</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/c5bca33d-6b54-49c2-b285-87567088f7e3"/>
+    
+</details>
+
+<details>
+  <summary>View User Profile</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/26afdc6a-079d-4e55-8608-5eed9ecff807"/>
+    
+</details>
+
+<details>
+  <summary>View All StudyGroup Article</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/3b0a0d59-26e0-4d62-9a64-c08f226b093c"/>
+    
+</details>
+
+<details>
+  <summary>Write StudyGroup Article</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/3a31d9be-d630-4a9f-bd08-4b842210929a"/>
+    
+</details>
+
+<details>
+  <summary>View StudyGroup Article</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/7d3366af-8253-456c-a8c6-beeef0776f4c"/>
+    
+</details>
+
+<br>
 
 ### 📍 기능명세서(Functional Specification)
 <br>
@@ -91,5 +130,11 @@
 <br>
 <h2 align="center">와이어 프레임
 <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/fd0ff8cf-5980-47b6-aa5f-65d10e61ebd7"/>
+</h2>
+
+### 📍 Test 
+
+<h2 align="center"> 테스트 케이스 정의서
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/e017365f-57bd-4538-9728-3a69fb7abefe"/>
 </h2>
 
