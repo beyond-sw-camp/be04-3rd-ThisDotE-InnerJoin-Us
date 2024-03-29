@@ -302,7 +302,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
   @import "@/assets/css/MainPage/MainPageBeforeLogin/globals.css";
   @import "@/assets/css/MainPage/MainPageBeforeLogin/style.css";
 </style>
