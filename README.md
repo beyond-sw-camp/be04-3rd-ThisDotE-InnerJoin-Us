@@ -1,7 +1,6 @@
-<br><br><br>
-
+![header](https://capsule-render.vercel.app/api?type=venom&&color=100:B0F6FF,100:CCD7FF&height=300&section=header&text=InnerJoin%20Us&fontSize=90&fontColor=888888)
 <h1 align="center">
-  ✨ This.e 2조 ✨
+✨ This.e 2조 ✨
 </h1>
 
 <h2>
@@ -70,7 +69,6 @@
 <br><br><br>
 
 ## 📍 Figma Front 설계
-<br><br><br>
 
 <h2>Main Page&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUserProfile
   <br>
