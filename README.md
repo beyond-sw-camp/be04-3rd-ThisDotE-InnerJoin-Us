@@ -19,8 +19,7 @@
 
 <br>
 
-<div align="center">👾 Members 👾</div>
-<hr>
+<h2 align="center">👾 Members 👾</h2>
 
 <h3 align="center">
  
@@ -40,48 +39,49 @@
 [<img src="https://img.shields.io/badge/Github-Link-0038A4?logo=Github">](https://github.com/Bodrami)
 
 <br>
-<div align=center><h1>📚 Tools 📚</h1></div>
+<div align=center><h2>📚 Tools 📚</h2></div>
 
 <div align=center> 
+  <h3 align="center">🔅BackEnd🔅</h3>
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
   <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <br>
-  
+
+
+  <h3 align="center">🔅FrontEnd🔅</h3>
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> 
   <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
   <img src="https://img.shields.io/badge/vue.js-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white"> 
   <br>
 </div>
-
-<img src="https://github.com/ThisDotE/communityForDevelopers/assets/101622086/fb7f77e5-8922-41dd-9b81-247e7efddde5">
-
 </h3>
-<br><br><br>
-<div align=center>
-<img src="https://github.com/ThisDotE/InnerJoinUs/assets/149561287/7e153380-e7cb-49b9-9e3f-a725f675c2d7">
-</div>
-<br><br>
 
 <br>
 
-## 📍  스토리 보드(Story Board)
-<h3 align="center">
+## 1. 프로젝트 소개
+### 1-1. 저희 커뮤니티는 개발을 꿈꾸는 신입 개발자나 현 개발자를 위해 스터디 및 단위 프로젝트, 소모임을 쉽고 자율적으로 모일 수 있도록 스터디 플랫폼을 제공해주는 커뮤니티 입니다. 개발 주제뿐만이 아니라 각자 부족한 부분들을 채워갈 수 있는 스터디 주제를 선정하여 팀을 꾸릴 수 있습니다. 더불어 개발과 관련된 유용한 정보나 채용공고를 쉽게 볼 수 있는 정보 공유 게시판을 운영하고 있어 따로 찾아보지 않아도 한 곳에서 모아볼 수 있는 장점을 가지고 있습니다.
+
+
+## 2. I.A 구조도 및 스토리 보드(Story Board)
+### 📍 I.A(inpormation Architecture) 구조도
+
+
+### 📍 스토리 보드(Story Board)
 <details>
   <summary>Main Page</summary>
     
 <img src="github.com/ThisDotE/InnerJoinUs/assets/101622086/2cd0090b-73c2-4d33-8a34-0be4fda76673"/>
     
 </details>
-</h3>
 
-## 📍  기능명세서(Functional Specification)
+### 📍 기능명세서(Functional Specification)
 <br>
 
 <img src="https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/afc0359c-2472-484c-8275-ca04184df25d" width="800" height="400"/>
 
 <br>
 
-## 📍 Figma Front 설계
+### 📍 Figma Front 설계
 
 <h2 align="center">Whole Windows
   <br>
