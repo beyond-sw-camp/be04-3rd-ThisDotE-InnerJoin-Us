@@ -95,7 +95,7 @@
           <img class="image-3" src="@/assets/img/MainPage/MainPageBeforeLogin/3.png" />
           <div  v-if="studyList.length" class="group-13">
             <div class="text-wrapper-15"   @click="changeRouter(studyList[0]?.articleId)">{{ studyList[0]?.articleTitle }}</div>
-            <div class="text-wrapper-16">{{ studyList[0]?.articleCreateDate }}</div>
+            <div class="text-wrapper-16">{{ convertTimeZone(studyList[0]?.articleCreateDate) }}</div>
             <div class="text-wrapper-17" @click="changeRouterToProfile(studyList[0]?.userCode)">{{ studyList[0]?.userList?.userId }}</div>
           </div>
           <div v-if="studyList.length" class="group-14">
@@ -111,7 +111,7 @@
           <img class="image-4" src="@/assets/img/MainPage/MainPageBeforeLogin/3.png" />
           <div v-if="studyList.length" class="group-16">
             <div class="text-wrapper-15" @click="changeRouter(studyList[1]?.articleId)">{{ studyList[1]?.articleTitle }}</div>
-            <div class="text-wrapper-16">{{ studyList[1]?.articleCreateDate }}</div>
+            <div class="text-wrapper-16">{{ convertTimeZone(studyList[1]?.articleCreateDate) }}</div>
             <div class="text-wrapper-17" @click="changeRouterToProfile(studyList[1]?.userCode)">{{ studyList[1]?.userList?.userId }}</div>
           </div>
           <div v-if="studyList.length" class="group-17">
@@ -127,7 +127,7 @@
           <img class="image-4" src="@/assets/img/MainPage/MainPageBeforeLogin/4.png" />
           <div v-if="studyList.length" class="group-16">
             <div class="text-wrapper-15" @click="changeRouter(studyList[2]?.articleId)">{{ studyList[2]?.articleTitle }}</div>
-            <div class="text-wrapper-16">{{ studyList[2]?.articleCreateDate }}</div>
+            <div class="text-wrapper-16">{{ convertTimeZone(studyList[2]?.articleCreateDate) }}</div>
             <div class="text-wrapper-17" @click="changeRouterToProfile(studyList[2]?.userCode)">{{ studyList[2]?.userList?.userId }}</div>
           </div>
           <div v-if="studyList.length" class="group-17">
@@ -142,37 +142,37 @@
         <div v-if="shareInfoList.length" class="group-11">                                 <!-- 정보공유 1번 -->
           <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/1.png" />
           <div class="text-wrapper-12">{{ shareInfoList[0]?.articleTitle }}</div>
-          <div class="text-wrapper-13">{{ shareInfoList[0]?.articleCreateDate }}</div>
+          <div class="text-wrapper-13">{{ convertTimeZone(shareInfoList[0]?.articleCreateDate) }}</div>
           <div class="text-wrapper-14">{{ shareInfoList[0]?.userList?.userId }}</div>
         </div>
         <div v-if="shareInfoList.length" class="group-20">                                 <!-- 정보공유 2번 -->
           <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
           <div class="text-wrapper-12">{{ shareInfoList[1]?.articleTitle }}</div>
-          <div class="text-wrapper-13">{{ shareInfoList[1]?.articleCreateDate }}</div>
+          <div class="text-wrapper-13">{{ convertTimeZone(shareInfoList[1]?.articleCreateDate) }}</div>
           <div class="text-wrapper-14">{{ shareInfoList[1]?.userList?.userId }}</div>
         </div>
         <div v-if="shareInfoList.length" class="group-21">                                    <!-- 정보공유 3번 -->
             <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
             <div class="text-wrapper-12">{{ shareInfoList[2]?.articleTitle }}</div>
-            <div class="text-wrapper-13">{{ shareInfoList[2]?.articleCreateDate }}</div>
+            <div class="text-wrapper-13">{{ convertTimeZone(shareInfoList[2]?.articleCreateDate) }}</div>
             <div class="text-wrapper-14">{{ shareInfoList[2]?.userList?.userId }}</div>
           </div>
           <div v-if="questionList.length" class="group-22">                                    <!-- 질문 1번 -->
             <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
             <div class="text-wrapper-12">{{ questionList[0]?.articleTitle }}</div>
-            <div class="text-wrapper-13">{{ questionList[0]?.articleCreateDate }}</div>
+            <div class="text-wrapper-13">{{ convertTimeZone(questionList[0]?.articleCreateDate) }}</div>
             <div class="text-wrapper-14">{{ questionList[0]?.userList?.userId }}</div>
           </div>
         <div v-if="questionList.length" class="group-19">                                 <!-- 질문 2번 -->
           <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
           <div class="text-wrapper-12">{{ questionList[1]?.articleTitle }}</div>
-          <div class="text-wrapper-13">{{ questionList[1]?.articleCreateDate }}</div>
+          <div class="text-wrapper-13">{{ convertTimeZone(questionList[1]?.articleCreateDate) }}</div>
           <div class="text-wrapper-14">{{ questionList[1]?.userList?.userId }}</div>
         </div>
           <div v-if="questionList.length" class="group-23">                                    <!-- 질문 3번 -->
             <img class="image-2" src="@/assets/img/MainPage/MainPageBeforeLogin/9.png" />
             <div class="text-wrapper-12">{{ questionList[2]?.articleTitle }}</div>
-            <div class="text-wrapper-13">{{ questionList[2]?.articleCreateDate }}</div>
+            <div class="text-wrapper-13">{{ convertTimeZone(questionList[2]?.articleCreateDate) }}</div>
             <div class="text-wrapper-14">{{ questionList[2]?.userList?.userId }}</div>
           </div>
       </div>
@@ -225,9 +225,9 @@
   onMounted(async() => {
     try{
       const response = await axios.get('http://localhost:8000/article-reply/main');
-      studyValue.value = response.data['1'];
-      shareValue.value = response.data['2'];
-      questValue.value = response.data['3'];
+      studyValue.value = response.data['3'];
+      shareValue.value = response.data['1'];
+      questValue.value = response.data['2'];
 
       for (let i = 0; i < 4; i++) {
           studyList.value.push(studyValue.value[i]);
@@ -290,6 +290,16 @@
     router.go(0);
   }
 
+  function convertTimeZone(datetimeValue) {
+		const date = new Date(datetimeValue);
+		const formattedDate = 
+			date.getFullYear() + "." + 
+			String(date.getMonth() + 1).padStart(2, '0') + "." + 
+			String(date.getDate()).padStart(2, '0') + ". " + 
+			String(date.getHours()).padStart(2, '0') + ":" + 
+			String(date.getMinutes()).padStart(2, '0');
+    return formattedDate;
+	}
 </script>
 
 <style>
