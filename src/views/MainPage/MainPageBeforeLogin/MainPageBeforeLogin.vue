@@ -38,7 +38,7 @@
                   <ul style="width: 179px;" class="dropdown-menu">
                     <li><a class="dropdown-item" @click="navigateToUserProfile(userCode)" >내 프로필</a></li>
                     <li><a class="dropdown-item" href="#">설정</a></li>
-                    <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                    <li><a class="dropdown-item" @click="logout">로그아웃</a></li>
                   </ul>
                 </div>
               </div>
@@ -192,12 +192,17 @@
 
   onBeforeMount(async () => {
     let loginResponse = document.cookie;
+    console.log(loginResponse);
 
-    isBeforeLogin.value = !loginResponse;
+    let accessToken = getCookie("Authorization");
+    let loginCode = getCookie("LoginCode");
 
-    if (loginResponse) {
-      let loginCode = loginResponse.split('; ')[1].split('=')[1];
+    console.log(accessToken);
+    console.log(loginCode);
 
+    isBeforeLogin.value = !accessToken;
+
+    if (accessToken) {
       await axios.get(`http://localhost:8000/user/login-code/${loginCode}`)
       .then(function (response) {
         userCode.value = response.data.userCode;
@@ -254,6 +259,37 @@
   function navigateToUserProfile(userCode) {
     router.push(`/viewUserProfile/${userCode}`);
   }
+
+  function getCookie(cookieName) {
+    var name = cookieName + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieArray = decodedCookie.split(';');
+
+    for(var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i];
+
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1);
+        }
+
+        if (cookie.indexOf(name) == 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+    return "";
+  }
+
+  function deleteCookies(cookieNames) {
+    cookieNames.forEach(function(cookieName) {
+        document.cookie = cookieName + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+    });
+  }
+
+  function logout() {
+    deleteCookies(["Authorization", "LoginCode"]);
+    router.go(0);
+  }
+
 </script>
 
 <style>
