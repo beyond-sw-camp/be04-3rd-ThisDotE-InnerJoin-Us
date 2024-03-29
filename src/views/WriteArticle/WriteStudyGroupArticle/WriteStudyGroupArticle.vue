@@ -127,8 +127,7 @@ export default {
     const route = useRoute();
     const router = useRouter();
 
-    const userCode1 = route.params.id
-
+    const userCode1 = route.params
     const submitForm = async () => {
       const data = {
         articleTitle: articleTitle.value,
@@ -150,6 +149,7 @@ export default {
       const url = `http://localhost:8000/article-reply/article`;
 
       try {
+        console.log(userCode1);
         const response = await axios.post(url, data);
         console.log(response); // 로그 출력
         router.push('/ViewAllStudyGroupArticle'); // 현재 페이지 새로고침

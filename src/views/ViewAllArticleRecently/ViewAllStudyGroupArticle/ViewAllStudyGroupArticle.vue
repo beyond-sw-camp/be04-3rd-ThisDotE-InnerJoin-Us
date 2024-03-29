@@ -28,7 +28,7 @@
 				<img class="image" src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/image.png" />
 				<div class="group-3">
 					<div class="overlap-group-2">
-						<div @click="routeWriteArticle()" class="text-wrapper-4">
+						<div @click="routeWriteArticle(item?.userCode)" class="text-wrapper-4">
 							<a
 								target="_self"
 								style="color: gray"
@@ -126,6 +126,7 @@
 
 	const router = useRouter();
 
+
 	const studyArticleList = ref([]);
 
 	const items = ref([{
@@ -147,11 +148,12 @@
 		router.push('/');
 	}
 
-	function routeWriteArticle() {
-		router.push('/writeStudyGroupArticle');
+	function routeWriteArticle(routerName) {
+		router.push(`/writeStudyGroupArticle/${routerName}`);
 	}
 
 	function routerViewArticle(routerName) {
+		console.log('aa', routerName);
 		router.push(`/viewStudyGroupArticle/${routerName}`);
 	}
 

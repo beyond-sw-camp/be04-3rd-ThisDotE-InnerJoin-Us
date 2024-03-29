@@ -28,7 +28,7 @@ const router = createRouter({
 
         /* Article */
         {
-            path: '/writeStudyGroupArticle',
+            path: '/writeStudyGroupArticle/:id',
             component: WriteStudyGroupArticle
         },
         {
