@@ -62,16 +62,24 @@
 </div>
 <br><br>
 
-<br/>
+<br>
 
-<br><br>
+## 📍  스토리 보드(Story Board)
+<h3 align="center">
+<details>
+  <summary>Main Page</summary>
+    
+<img src="github.com/ThisDotE/InnerJoinUs/assets/101622086/2cd0090b-73c2-4d33-8a34-0be4fda76673"/>
+    
+</details>
+</h3>
 
 ## 📍  기능명세서(Functional Specification)
 <br>
 
 <img src="https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/afc0359c-2472-484c-8275-ca04184df25d" width="800" height="400"/>
 
-<br><br><br>
+<br>
 
 ## 📍 Figma Front 설계
 
@@ -79,5 +87,9 @@
   <br>
   <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/46e41294-88a3-4aa3-98f4-518a0d173244"/>
   <br>
+</h2>
+<br>
+<h2 align="center">와이어 프레임
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/fd0ff8cf-5980-47b6-aa5f-65d10e61ebd7"/>
 </h2>
 
