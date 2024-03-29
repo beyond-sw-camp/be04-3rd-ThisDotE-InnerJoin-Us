@@ -121,20 +121,59 @@
 <br>
 
 ### 📍 Figma Front 설계
-
-<h2 align="center">Whole Windows
+<hr>
+<div align="center">Whole Windows
   <br>
   <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/46e41294-88a3-4aa3-98f4-518a0d173244"/>
   <br>
-</h2>
+</div>
 <br>
-<h2 align="center">와이어 프레임
+<hr>
+<div align="center">와이어 프레임
 <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/fd0ff8cf-5980-47b6-aa5f-65d10e61ebd7"/>
-</h2>
+</div>
 
 ### 📍 Test 
-
+<hr>
 <h2 align="center"> 테스트 케이스 정의서
 <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/e017365f-57bd-4538-9728-3a69fb7abefe"/>
 </h2>
+<br>
+<details>
+  <summary>Login / LogOut</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/b6d52b1f-73d3-4b95-b761-07c2a60831c1"/>
+    
+</details>
 
+<br>
+
+<details>
+  <summary>Write StudyGroup Article</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/e4881558-f252-4542-8d9f-6c4238174a7a"/>
+    
+</details>
+
+<br>
+
+<details>
+  <summary>Write StudyGroup Article Reply</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/1e228936-f1fc-4fda-b414-838ffeaf2ae5"/>
+    
+</details>
+
+<br>
+
+<details>
+  <summary>View User Profile</summary>
+    
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/12c31976-d776-4704-9060-90a5d270c322"/>
+    
+</details>
+
+<br>
+
+### 📍 회고
+<hr>
