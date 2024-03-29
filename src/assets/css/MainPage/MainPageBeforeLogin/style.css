@@ -65,6 +65,7 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .div-wrapper .text-wrapper-2 {
@@ -178,6 +179,7 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .div-wrapper .rectangle {
@@ -298,6 +300,7 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .div-wrapper .line-2 {
@@ -352,6 +355,8 @@
   height: 53px;
   top: 607px;
   left: 878px;
+  display: flex;
+  flex-direction: column;
 }
 
 .div-wrapper .overlap-5 {
@@ -491,6 +496,7 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .text-wrapper-16 {
@@ -517,6 +523,7 @@
   font-size: 20px;
   letter-spacing: 0;
   line-height: normal;
+  cursor: pointer;
 }
 
 .div-wrapper .group-14 {
@@ -669,4 +676,26 @@
   height: 78px;
   top: 908px;
   left: 878px;
+}
+
+.div-wrapper .ellipse {
+  position: absolute;
+  width: 43px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  background-color: #7f94e1;
+  border-radius: 21.5px/20px;
+}
+
+.div-wrapper .vector {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 11px;
+  right: 12px;
+}
+
+.dropdown {
+  height: 40px;
 }

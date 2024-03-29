@@ -26,45 +26,45 @@
       <div class="group-5">
         <div class="overlap-3"><div class="text-wrapper-7">git</div></div>
       </div>
-      <div class="group-6">
+      <div v-if="articles != null" class="group-6">
         <img class="image" src="../../../../src/assets/img/UserProfile/ViewUserProfile/3.png" />
         <img class="mdi-like" src="../../../../src/assets/img/UserProfile/ViewUserProfile/mdi-like-3.png" />
         <img class="carbon-view" src="../../../../src/assets/img/UserProfile/ViewUserProfile/carbon-view-3.png" />
         <img class="img" src="../../../../src/assets/img/UserProfile/ViewUserProfile/vector-4.png" />
-        <div class="text-wrapper-8">490</div>
-        <div class="text-wrapper-9">15</div>
-        <div class="text-wrapper-10">NullPointerException 피하기</div>
-        <div class="text-wrapper-11">💡 클린 코드 사용해보세요~</div>
+        <div class="text-wrapper-8">{{ articles[0]?.articleViewCount }}</div>
+        <div class="text-wrapper-9">{{ articles[0]?.articleReplyCount }}</div>
+        <div class="text-wrapper-10">{{ articles[0]?.articleContent }}</div>
+        <div class="text-wrapper-11">💡 {{ articles[0]?.articleTitle }}</div>   
       </div>
-      <div class="group-7">
+      <div v-if="articles != null" class="group-7">
         <img class="image" src="../../../../src/assets/img/UserProfile/ViewUserProfile/3.png" />
         <img class="mdi-like" src="../../../../src/assets/img/UserProfile/ViewUserProfile/mdi-like-3.png" />
         <img class="carbon-view" src="../../../../src/assets/img/UserProfile/ViewUserProfile/carbon-view-3.png" />
         <img class="img" src="../../../../src/assets/img/UserProfile/ViewUserProfile/vector-4.png" />
-        <div class="text-wrapper-8">490</div>
-        <div class="text-wrapper-9">15</div>
-        <div class="text-wrapper-10">NullPointerException 피하기</div>
-        <div class="text-wrapper-11">💡 클린 코드 사용해보세요~</div>
+        <div class="text-wrapper-8">{{ articles[2]?.articleViewCount }}</div>
+        <div class="text-wrapper-9">{{ articles[2]?.articleReplyCount }}</div>
+        <div class="text-wrapper-10">{{ articles[2]?.articleContent }}</div>
+        <div class="text-wrapper-11">💡 {{ articles[2]?.articleTitle }}</div>
       </div>
-      <div class="group-8">
+      <div v-if="articles != null" class="group-8">
         <img class="image" src="../../../../src/assets/img/UserProfile/ViewUserProfile/3.png" />
         <img class="mdi-like" src="../../../../src/assets/img/UserProfile/ViewUserProfile/mdi-like-3.png" />
         <img class="carbon-view" src="../../../../src/assets/img/UserProfile/ViewUserProfile/carbon-view-3.png" />
         <img class="img" src="../../../../src/assets/img/UserProfile/ViewUserProfile/vector-4.png" />
-        <div class="text-wrapper-8">490</div>
-        <div class="text-wrapper-9">15</div>
-        <div class="text-wrapper-10">NullPointerException 피하기</div>
-        <div class="text-wrapper-11">💡 클린 코드 사용해보세요~</div>
+        <div class="text-wrapper-8">{{ articles[3]?.articleViewCount }}</div>
+        <div class="text-wrapper-9">{{ articles[3]?.articleReplyCount }}</div>
+        <div class="text-wrapper-10">{{ articles[3]?.articleContent }}</div>
+        <div class="text-wrapper-11">💡 {{ articles[3]?.articleTitle }}</div>
       </div>
-      <div class="group-9">
+      <div v-if="articles != null" class="group-9">
         <img class="image" src="../../../../src/assets/img/UserProfile/ViewUserProfile/3.png" />
         <img class="mdi-like" src="../../../../src/assets/img/UserProfile/ViewUserProfile/mdi-like-3.png" />
         <img class="carbon-view" src="../../../../src/assets/img/UserProfile/ViewUserProfile/carbon-view-3.png" />
         <img class="img" src="../../../../src/assets/img/UserProfile/ViewUserProfile/vector-4.png" />
-        <div class="text-wrapper-8">490</div>
-        <div class="text-wrapper-9">15</div>
-        <div class="text-wrapper-10">NullPointerException 피하기</div>
-        <div class="text-wrapper-11">💡 클린 코드 사용해보세요~</div>
+        <div class="text-wrapper-8">{{ articles[1]?.articleViewCount }}</div>
+        <div class="text-wrapper-9">{{ articles[1]?.articleReplyCount }}</div>
+        <div class="text-wrapper-10">{{ articles[1]?.articleContent }}</div>
+        <div class="text-wrapper-11">💡 {{ articles[1]?.articleTitle }}</div>
       </div>
       <div class="group-10">
         <div class="text-wrapper-12">스킬</div>
@@ -119,8 +119,8 @@
           <div class="text-wrapper-16">버섯키우기 프론트엔드 개발</div>
         </div>
       </div>
-      <div class="group-16">
-        <div class="text-wrapper-17">신동호</div>
+      <div v-if="profile" class="group-16">
+        <div class="text-wrapper-17">{{ profile.userId }}</div>
         <div class="text-wrapper-18">한화시스템 백엔드 개발자</div>
         <p class="p">
           저는 한화 시스템에서 근무 중인 백엔드 개발자 입니다. 취미로는 애니 보는 것이며,<br />그리고 점심에는 공화춘
@@ -162,7 +162,7 @@
       <div class="group-23">
         <div class="overlap-5">
           <div class="overlap-6">
-            <img class="innerjoin-us" src="../../../../src/assets/img/UserProfile/ViewUserProfile/innerjoin-us.png" /> 
+            <img @click="routerMain()" class="innerjoin-us" src="../../../../src/assets/img/UserProfile/ViewUserProfile/innerjoin-us.png" /> 
             <img class="image-3" src="../../../../src/assets/img/UserProfile/ViewUserProfile/7.png" />
           </div>
           <div class="text-wrapper-23">스터디구인</div>
@@ -183,6 +183,37 @@
 
 <script setup>
 
+  import axios from 'axios';
+  import { ref, onMounted } from 'vue';
+  import { useRoute, useRouter } from 'vue-router';
+
+  const profile = ref([
+    
+  ]);
+  const articles = ref([
+    
+  ]);
+
+
+  const route = useRoute();
+  const router = useRouter();
+
+  onMounted(async() => {
+    try {
+      const response = await axios.get(`http://localhost:8000/user/${route.params.id}`);
+      profile.value = response.data;
+      articles.value = response.data.articleList;
+      console.log(profile.value);
+      console.log(articles.value);
+
+    } catch (error) {
+      console.error("Error: ", error);
+    }
+  })
+
+  function routerMain() {
+    router.push('/');
+  }
 </script>
 
 <style scoped>
