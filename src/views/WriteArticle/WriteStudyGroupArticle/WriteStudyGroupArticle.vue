@@ -127,21 +127,23 @@ export default {
     const route = useRoute();
     const router = useRouter();
 
+    const userCode1 = route.params.id
+
     const submitForm = async () => {
       const data = {
         articleTitle: articleTitle.value,
         articleContent: articleContent.value,
         studygroupMemberMaxCount: studygroupMemberMaxCount.value,
         articleCategory: 3,
-        articleViewCount: 2,
-        articleLikeCount: 5,
+        articleViewCount: 0,
+        articleLikeCount: 0,
         articleReplyCount: 6,
-        articleReportStatus: 3,
-        articleQuestionCategory: 34,
+        articleReportStatus: 0,
+        articleQuestionCategory: 1,
         userCode: 6,
         studygroupId: 12,
-        studygroupCurrentMemberCount: 1,
-        studygroupPendingMemberCount: 2,
+        studygroupCurrentMemberCount: 0,
+        studygroupPendingMemberCount: 0,
         articleDeleteStatus: 0
       };
 
