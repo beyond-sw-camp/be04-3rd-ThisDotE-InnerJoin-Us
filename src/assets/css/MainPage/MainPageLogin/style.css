@@ -68,6 +68,7 @@
 }
 
 .screen .group-2 {
+  display: none;
   position: absolute;
   width: 541px;
   height: 20px;
@@ -129,7 +130,7 @@
   height: 56px;
   top: -4px;
   left: -4px;
-  background-image: url(./img/rectangle-499.png);
+  background-image: url(../../../img/MainPage/MainPageLogin/rectangle-499.png);
   background-size: 100% 100%;
 }
 
@@ -147,8 +148,9 @@
   height: 56px;
   top: -4px;
   left: 165px;
-  background-image: url(./img/rectangle-500.png);
+  background-image: url(../../../img/MainPage/MainPageLogin//rectangle-500.png);
   background-size: 100% 100%;
+  cursor: pointer;
 }
 
 .screen .cib-google {
@@ -165,7 +167,7 @@
   height: 56px;
   top: -4px;
   left: 335px;
-  background-image: url(./img/rectangle-501.png);
+  background-image: url(../../../img/MainPage/MainPageLogin//rectangle-501.png);
   background-size: 100% 100%;
 }
 
@@ -178,6 +180,7 @@
 }
 
 .screen .group-4 {
+  display: none;
   position: absolute;
   width: 400px;
   height: 201px;
@@ -221,7 +224,7 @@
   height: 48px;
   top: 0;
   left: 0;
-  background-image: url(./img/rectangle-502.png);
+  background-image: url(../../../img/MainPage/MainPageLogin//rectangle-502.png);
   background-size: 100% 100%;
 }
 
@@ -245,7 +248,7 @@
   height: 48px;
   top: 71px;
   left: 0;
-  background-image: url(./img/rectangle-503.png);
+  background-image: url(../../../img/MainPage/MainPageLogin//rectangle-503.png);
   background-size: 100% 100%;
 }
 

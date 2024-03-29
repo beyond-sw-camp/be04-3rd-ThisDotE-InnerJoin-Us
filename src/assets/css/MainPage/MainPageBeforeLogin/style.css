@@ -179,6 +179,7 @@
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .div-wrapper .rectangle {
@@ -675,4 +676,26 @@
   height: 78px;
   top: 908px;
   left: 878px;
+}
+
+.div-wrapper .ellipse {
+  position: absolute;
+  width: 43px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  background-color: #7f94e1;
+  border-radius: 21.5px/20px;
+}
+
+.div-wrapper .vector {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 11px;
+  right: 12px;
+}
+
+.dropdown {
+  height: 40px;
 }
