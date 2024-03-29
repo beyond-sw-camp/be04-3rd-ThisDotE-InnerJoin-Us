@@ -214,11 +214,12 @@
 }
 
 .div-wrapper .group-6 {
-  position: absolute;
+  position: relative;
   width: 235px;
-  height: 73px;
-  top: 596px;
-  left: 194px;
+  height: 80px;
+  top: 50px;
+  left: 0px;
+
 }
 
 .div-wrapper .image {
@@ -377,6 +378,7 @@
   position: relative;
   width: 240px;
   height: 97px;
+  background-color: #ffffff;
 }
 
 .div-wrapper .rectangle {
@@ -385,6 +387,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 15px;
 }
 
 .div-wrapper .text-wrapper-13 {
@@ -559,6 +562,7 @@
   position: relative;
   width: 71px;
   height: 32px;
+  border: none;
 }
 
 .div-wrapper .rectangle-2 {
@@ -591,7 +595,7 @@
 }
 
 .div-wrapper .group-19 {
-  position: absolute;
+  position: relative;
   width: 263px;
   height: 41px;
   top: 540px;
@@ -623,6 +627,7 @@
   position: relative;
   width: 43px;
   height: 18px;
+  border: none;
 }
 
 .div-wrapper .text-wrapper-21 {
@@ -697,6 +702,7 @@
   height: 94px;
   top: 0;
   left: 0;
+  background-color: #ffffff;
 }
 
 .div-wrapper .innerjoin-us {
