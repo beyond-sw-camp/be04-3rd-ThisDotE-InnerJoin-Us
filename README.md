@@ -63,7 +63,7 @@
 > InnerJoin Us
 #### 저희 커뮤니티는 개발을 꿈꾸는 신입 개발자나 현 개발자를 위해 스터디 및 단위 프로젝트, 소모임을 쉽고 자율적으로 모일 수 있도록 스터디 플랫폼을 제공해주는 커뮤니티 입니다. 개발 주제뿐만이 아니라 각자 부족한 부분들을 채워갈 수 있는 스터디 주제를 선정하여 팀을 꾸릴 수 있습니다. 더불어 개발과 관련된 유용한 정보나 채용공고를 쉽게 볼 수 있는 정보 공유 게시판을 운영하고 있어 따로 찾아보지 않아도 한 곳에서 모아볼 수 있는 장점을 가지고 있습니다.
 
-<br>
+<br><br>
 
 # 2. I.A 구조도 및 스토리 보드(Story Board)
 ### 📍 I.A(inpormation Architecture) 구조도
@@ -72,7 +72,7 @@
 <br>
 
 ### 📍 스토리 보드(Story Board)
-<br>
+
 <details>
   <summary>Main Page</summary>
     
@@ -90,7 +90,7 @@
 <details>
   <summary>View User Profile</summary>
     
-<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/26afdc6a-079d-4e55-8608-5eed9ecff807"/>
+<img src="https://github.com/beyond-sw-camp/be04-3rd-ThisDotE-InnerJoin-Us/assets/149561287/c47819eb-b8c2-4e5f-87b3-75a176c11a4d"/>
     
 </details>
 
@@ -115,30 +115,27 @@
     
 </details>
 
-<br>
+<br><br>
 
-### 📍 기능명세서(Functional Specification)
-<br>
+# 3. 기능명세서(Functional Specification)
 
 <img src="https://github.com/beyond-sw-camp/be04-1st-EarlyFar-FaaarCar/assets/101622086/afc0359c-2472-484c-8275-ca04184df25d" width="800" height="400"/>
 
-<br>
+<br><br>
 
-### 📍 Figma Front 설계
-<hr>
-<div align="center">Whole Windows
-  <br>
+# 4. Figma Front 설계
+
+> Whole Windows
   <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/46e41294-88a3-4aa3-98f4-518a0d173244"/>
-  <br>
-</div>
-<br>
-<hr>
-<div align="center">와이어 프레임
-<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/fd0ff8cf-5980-47b6-aa5f-65d10e61ebd7"/>
-</div>
 
-### 📍 Test 
-<hr>
+<br><br>
+
+# 5. Wire Frame 와이어 프레임
+<img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/fd0ff8cf-5980-47b6-aa5f-65d10e61ebd7"/>
+
+<br><br>
+
+# 6. Test
 <h2 align="center"> 테스트 케이스 정의서
 <img src="https://github.com/ThisDotE/InnerJoinUs/assets/101622086/e017365f-57bd-4538-9728-3a69fb7abefe"/>
 </h2>
@@ -177,7 +174,16 @@
     
 </details>
 
-<br>
+<br><br>
 
-### 📍 회고
-<hr>
+# 7. 회고
+
+- **이준형** :
+
+- **신대영** :
+
+- **소우주** :
+  
+- **신동호** :
+  
+- **이드보라** :
