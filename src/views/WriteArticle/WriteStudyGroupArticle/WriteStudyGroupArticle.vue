@@ -77,7 +77,7 @@
           <div class="group-10">
             <div class="overlap-group-2">
               <div class="rectangle-5"></div>
-              <a href="ViewAllStudyGroupArticle" @click="gobackList" class="text-wrapper-10">취소</a>
+              <a href="/ViewAllStudyGroupArticle" @click="gobackList" class="text-wrapper-10">취소</a>
             </div>
           </div>
         </div>
