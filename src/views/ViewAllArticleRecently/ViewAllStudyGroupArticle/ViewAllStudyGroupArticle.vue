@@ -51,7 +51,7 @@
 							<p @click="routerViewArticle(item?.articleId)" class="springboot">
 								{{ item?.articleContent }}
 							</p>
-							<div class="text-wrapper-10">{{item?.studygroupRecruitmentDeadline}}</div>
+							<div class="text-wrapper-10">{{ convertTimeZone(item?.studygroupRecruitmentDeadline) }}</div>
 							<div class="text-wrapper-11">모집기한</div>
 							<p @click="routerViewArticle(item?.articleId)" class="p">
 								{{ item?.articleTitle }}
