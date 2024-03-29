@@ -149,7 +149,7 @@
 
 .div-wrapper .text-wrapper-5 {
   top: 5px;
-  left: 26px;
+  left: -5px;
   color: #5e5e5e;
   font-size: 10px;
   white-space: nowrap;
@@ -187,6 +187,7 @@
   height: 94px;
   top: 0;
   left: 0;
+  background-color: #ffffff;
 }
 
 .div-wrapper .innerjoin-us {
@@ -270,7 +271,7 @@
   width: 706px;
   height: 108px;
   top: 20px;
-  /* left: 365px; */
+  left: 0px;
   flex-direction: column;
 }
 
@@ -297,6 +298,7 @@
   height: 19px;
   top: 10px;
   left: 45px;
+  background-color: #ffffff;
 }
 
 .div-wrapper .text-wrapper-7 {
@@ -317,12 +319,12 @@
 .div-wrapper .text-wrapper-8 {
   position: absolute;
   height: 8px;
-  top: 7px;
-  left: 76px;
+  top: 0px;
+  left: 90px;
   font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #6f6a6a;
-  font-size: 7px;
+  font-size: 12px;
   letter-spacing: 0;
   line-height: normal;
   white-space: nowrap;
@@ -429,6 +431,7 @@
   left: 567px;
   background-image: url(./img/vector-5.png);
   background-size: 100% 100%;
+  background-color: #ffffff;
 }
 
 .div-wrapper .vector-6 {

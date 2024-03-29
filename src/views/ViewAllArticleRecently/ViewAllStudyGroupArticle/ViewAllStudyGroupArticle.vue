@@ -44,14 +44,14 @@
 							<img class="image-3" src="@/assets/img/ViewAllArticleRecently/ViewAllStudyGroupArticle/2.png" />
 							<div class="overlap-4">
 								<div @click="routerToProfile(item?.userCode)" class="text-wrapper-7">{{ item?.userList?.userId }}</div>
-								<div class="text-wrapper-8">{{ item?.articleCreateDate }}</div>
+								<div class="text-wrapper-8">{{ convertTimeZone(item?.articleCreateDate) }}</div>
 							</div>
 							<div class="text-wrapper-9">모집정원</div>
 							<div class="element">{{ item?.studygroupCurrentMemberCount }}&nbsp;&nbsp;/&nbsp;&nbsp;{{ item?.studygroupMemberMaxCount }}</div>
 							<p @click="routerViewArticle(item?.articleId)" class="springboot">
 								{{ item?.articleContent }}
 							</p>
-							<div class="text-wrapper-10">{{item?.studygroupRecruitmentDeadline}}</div>
+							<div class="text-wrapper-10">{{ convertTimeZone(item?.studygroupRecruitmentDeadline) }}</div>
 							<div class="text-wrapper-11">모집기한</div>
 							<p @click="routerViewArticle(item?.articleId)" class="p">
 								{{ item?.articleTitle }}
@@ -159,6 +159,16 @@
 		router.push(`/viewuserprofile/${routerName}`);
     }
 
+	function convertTimeZone(datetimeValue) {
+		const date = new Date(datetimeValue);
+		const formattedDate = 
+			date.getFullYear() + "." + 
+			String(date.getMonth() + 1).padStart(2, '0') + "." + 
+			String(date.getDate()).padStart(2, '0') + ". " + 
+			String(date.getHours()).padStart(2, '0') + ":" + 
+			String(date.getMinutes()).padStart(2, '0');
+		return formattedDate;
+	}
 </script>
 
 <style scoped>

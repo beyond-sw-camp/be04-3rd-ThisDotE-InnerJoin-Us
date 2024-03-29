@@ -84,7 +84,9 @@
         <div class="group-11">
           <div class="overlap-3">
             <div class="overlap-4">
-              <img @click="routerMain()" class="innerjoin-us" src="../../../assets/img/WriteArticle/WriteStudyGroupArticle/innerjoin-us.png" />
+              <img class="innerjoin-us" src="../../../assets/img/WriteArticle/WriteStudyGroupArticle/innerjoin-us.png">
+                <a href="/" target="_self"></a>
+              </img>
               <img class="image" src="../../../assets/img/WriteArticle/WriteStudyGroupArticle/image.png"/>
             </div>
             <div class="vector-wrapper">
@@ -125,21 +127,23 @@ export default {
     const route = useRoute();
     const router = useRouter();
 
+    const userCode1 = route.params.id
+
     const submitForm = async () => {
       const data = {
         articleTitle: articleTitle.value,
         articleContent: articleContent.value,
         studygroupMemberMaxCount: studygroupMemberMaxCount.value,
         articleCategory: 3,
-        articleViewCount: 2,
-        articleLikeCount: 5,
+        articleViewCount: 0,
+        articleLikeCount: 0,
         articleReplyCount: 6,
-        articleReportStatus: 3,
-        articleQuestionCategory: 34,
+        articleReportStatus: 0,
+        articleQuestionCategory: 1,
         userCode: 6,
         studygroupId: 12,
-        studygroupCurrentMemberCount: 1,
-        studygroupPendingMemberCount: 2,
+        studygroupCurrentMemberCount: 0,
+        studygroupPendingMemberCount: 0,
         articleDeleteStatus: 0
       };
 
@@ -166,48 +170,6 @@ export default {
     };
   },
 }
-
-// function routerMain(){
-//   router.push('/');
-// }
-
-// export default {
-//   data() {
-//     return {
-//       articleTitle: '',
-//       articleContent: '',
-//       studygroupMemberMaxCount: '',
-//     }
-//   },
-//   methods: {
-//     submitForm() {
-//       const route = useRoute();
-
-//       const data = {
-//         articleTitle: this.articleTitle,
-//         articleContent: this.articleContent,
-//         studygroupMemberMaxCount: this.studygroupMemberMaxCount,
-//         articleCategory: 3,
-//         articleViewCount: 2,
-//         articleLikeCount: 5,
-//         articleReplyCount: 6,
-//         articleReportStatus: 3,
-//         articleQuestionCategory: 34,
-//         userCode: 6,
-//         studygroupId: 12,
-//         studygroupCurrentMemberCount: 1,
-//         studygroupPendingMemberCount: 2,
-//         articleDeleteStatus: 0
-//       }
-
-//       const url = `http://localhost:8000/article-reply/article`;
-
-//       axios.post(url, data);  
-//     }
-//   },
-//   mounted() {
-//   },
-// }
 
 
 
