@@ -149,6 +149,7 @@
 	}
 
 	function routeWriteArticle(routerName) {
+		console.log('aa', routerName);
 		router.push(`/writeStudyGroupArticle/${routerName}`);
 	}
 
